@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../public/reset.css">
     <style>
         .vs-wrapper {
+            margin-top: 200px;
             padding-top: 4px;
             background: #f4f4f5
         }
@@ -144,7 +145,7 @@
             width: 20px;
             opacity: 0;
             top: 0;
-            -webkit-animation: hy_football_lg_bar_plus 1s ease;
+            -webkit-animation: bar_plus 1s ease;
             vertical-align: top
         }
 
@@ -157,7 +158,8 @@
         }
 
         .team-vs-bar .increase i {
-            display: block
+            display: block;
+
         }
 
         .team-vs-bar .item {
@@ -175,7 +177,7 @@
             fill: #fff
         }
 
-        @-webkit-keyframes hy_football_lg_bar_plus {
+        @-webkit-keyframes bar_plus {
             0% {
                 opacity: 0;
                 -webkit-transform: scale(0)
@@ -198,19 +200,18 @@
 <body>
 <div class="vs-wrapper">
     <div class="vs-bar team-vs-bar">
-        <div class="bar-a" style="width: 23.8095%;">
-            <a data-dialog="" href="javascript:;" class="btn btn-a" data-rel=".bar-a" data-team="919188_1" data-log="2">
+        <div class="bar-a">
+            <a class="btn btn-a">
                 <div class="item"></div>
             </a>
             <div class="num-wrap">
                 <div class="num-inline"><span>5</span><i>+1</i></div>
             </div>
         </div>
-        <div class="bar-b" style="width: 76.1905%;">
-            <a data-dialog="" href="javascript:;" class="btn btn-b"
-                                                       data-rel=".bar-b" data-team="919188_14" data-log="2">
-            <div class="item"></div>
-        </a>
+        <div class="bar-b">
+            <a class="btn btn-b">
+                <div class="item"></div>
+            </a>
             <div class="num-wrap">
                 <div class="num-inline"><i>+1</i><span>16</span></div>
             </div>
@@ -219,53 +220,44 @@
 </div>
 </body>
 <script>
-    var f = function () {
-        function t(t) {
-            var e = i.find(".btn-a").data("team"), a = o.find(".btn-b").data("team");
+    function setWidth() {
+        var leftVote = 20, rightVote = 20 || 0;
+        allVote = parseInt(leftVote) + parseInt(rightVote);
+        leftBar.find("span").text(leftVote);
+        rightBar.find("span").text(rightVote);
+        leftBar.width(leftVote / allVote * 100 + "%");
+        rightBar.width(100 - rightVote / allVote * 100 + "%");
+    }
 
-            var r = 30 || 0, c = 20 || 0;
-            s = parseInt(r) + parseInt(c);
-            i.find("span").text(r);
-            o.find("span").text(c);
-            i.width(r / s * 100 + "%");
-            o.width(100 - r / s * 100 + "%");
-            t && t()
+    function voteClick(one) {
+        var other = one.siblings();
+        var oneDom = one.find("span"), oneValue = parseInt(oneDom.text());
+        oneValue++;
+        allVote++;
+        one.siblings().attr("style", "");
+        oneDom.text(oneValue);
+        one.removeClass("increase");
+        one.width(oneValue / allVote * 100 + "%");
+        other.width(100 - oneValue / allVote * 100 + "%");
+        clearTimeout(showOnePlus);
+        showOnePlus = setTimeout(function () {
+            one.addClass("increase");
+            clearTimeout(showOnePlus)
+        }, 0)
+    }
+
+    function init(bar) {
+        if (bar.length) {
+            leftBar = bar.find(".bar-a");
+            rightBar = bar.find(".bar-b");
+            setWidth();
+            bar.on("click", ".bar-a,.bar-b", function () {
+                voteClick($(this))
+            })
         }
+    }
 
-        function e(t) {
-            var e = t.find(".btn").data("team"), a = t.siblings();
-            $.ajax({url: n.vote + "&act=add&item=" + e + "&" + +new Date, dataType: "jsonp"});
-            var i = t.find("span"), o = parseInt(i.text());
-            o++;
-            s++;
-            t.siblings().attr("style", "");
-            i.text(o);
-            t.removeClass("circleAnimate");
-            t.removeClass("increase");
-            t.width(o / s * 100 + "%");
-            a.width(100 - o / s * 100 + "%");
-            clearTimeout(r);
-            r = setTimeout(function () {
-                t.addClass("increase");
-                t.addClass("circleAnimate");
-                clearTimeout(r)
-            }, 0)
-        }
-
-        function a(n) {
-            if (n.length) {
-                i = n.find(".bar-a");
-                o = n.find(".bar-b");
-                t();
-                n.on("click", ".bar-a,.bar-b", function () {
-                    e($(this))
-                })
-            }
-        }
-
-        var i, o, s, r;
-        return {init: a}
-    }();
-    f.init($(".team-vs-bar"))
+    var leftBar, rightBar, allVote, showOnePlus;
+    init($(".team-vs-bar"))
 </script>
 </html>
