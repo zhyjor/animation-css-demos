@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no"
+          name="viewport">
+    <style>
+        .HeartAnimation {
+            position: absolute;
+            background-image: url(web_heart_animation_edge.png);
+            background-position: left;
+            background-repeat: no-repeat;
+            background-size: 2900%;
+            height: 100px;
+            width: 100px;
+            left: 50%;
+            top: 50%;
+            -ms-transform: translate(-50%, -47.5%);
+            transform: translate(-50%, -47.5%)
+        }
+
+        .HeartAnimation :hover,.liked{
+            background-position: 3.571428571428571%
+        }
+
+        @keyframes heart-burst {
+            0% {
+                background-position: left
+            }
+
+            100% {
+                background-position: right
+            }
+        }
+
+         .like-active {
+            animation-timing-function: steps(28);
+            animation-name: heart-burst;
+            animation-duration: .8s;
+            animation-iteration-count: 1;
+            display: inline-block
+        }
+
+    </style>
+</head>
+<body>
+<div class="HeartAnimation"></div>
+<script src="../public/jquery-3.2.1.js"></script>
+<script>
+    $('.HeartAnimation').click(function () {
+        var _this = $(this)
+        _this.addClass('like-active')
+        setTimeout(function () {
+//            _this.removeClass('like-active')
+        },900)
+    })
+</script>
+</body>
+</html>

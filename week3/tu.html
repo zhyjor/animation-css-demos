@@ -1,0 +1,1050 @@
+<html lang="zh-cn" data-scribe-reduced-action-queue="true">
+<head>
+
+
+    <meta charset="utf-8">
+
+    <noscript>&lt;meta http-equiv="refresh" content="0; URL=https://mobile.twitter.com/i/nojs_router?path=%2F"&gt;
+    </noscript>
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script nonce="">
+        !function () {
+            window.initErrorstack || (window.initErrorstack = []), window.onerror = function (r, i, n, o, t) {
+                r.indexOf("Script error.") > -1 || window.initErrorstack.push({
+                    errorMsg: r,
+                    url: i,
+                    lineNumber: n,
+                    column: o,
+                    errorObj: t
+                })
+            }
+        }();
+    </script>
+
+
+    <script id="bouncer_terminate_iframe" nonce="">
+        if (window.top != window) {
+            window.top.postMessage({'bouncer': true, 'event': 'complete'}, '*');
+        }
+    </script>
+    <script id="resolve_inline_redirects" nonce="">
+        !function () {
+            function n() {
+                var n = window.location.href.match(/#(.)(.*)$/);
+                return n && "!" == n[1] && n[2].replace(/^\//, "")
+            }
+
+            function t() {
+                var t = n();
+                t && window.location.replace("//" + window.location.host + "/" + t)
+            }
+
+            t(), window.addEventListener ? window.addEventListener("hashchange", t, !1) : window.attachEvent && window.attachEvent("onhashchange", t)
+        }();
+    </script>
+    <script id="ttft_boot_data" nonce="">
+        window.ttftData = {
+            "transaction_id": "0057d837000b4eba.4a8dd65ce508892e\u003c:00556cf500c69c17",
+            "server_request_start_time": 1519303460158,
+            "user_id": 2836787209,
+            "is_ssl": true,
+            "rendered_on_server": true,
+            "is_tfe": true,
+            "client": "macaw-swift",
+            "tfe_version": "tsa_a\/1.0.1\/20180208.0131.695df08",
+            "ttft_browser": "chrome"
+        };
+        !function () {
+            function t(t, n) {
+                window.ttftData && !window.ttftData[t] && (window.ttftData[t] = n)
+            }
+
+            function n() {
+                return o ? Math.round(w.now() + w.timing.navigationStart) : (new Date).getTime()
+            }
+
+            var w = window.performance, o = w && w.now;
+            window.ttft || (window.ttft = {}), window.ttft.recordMilestone || (window.ttft.recordMilestone = t), window.ttft.now || (window.ttft.now = n)
+        }();
+    </script>
+    <script id="swift_action_queue" nonce="">
+        !function () {
+            function e(e) {
+                if (e || (e = window.event), !e) return !1;
+                if (e.timestamp = (new Date).getTime(), !e.target && e.srcElement && (e.target = e.srcElement), document.documentElement.getAttribute("data-scribe-reduced-action-queue")) for (var t = e.target; t && t != document.body;) {
+                    if ("A" == t.tagName) return;
+                    t = t.parentNode
+                }
+                return i("all", o(e)), a(e) ? (document.addEventListener || (e = o(e)), e.preventDefault = e.stopPropagation = e.stopImmediatePropagation = function () {
+                }, y ? (v.push(e), i("captured", e)) : i("ignored", e), !1) : (i("direct", e), !0)
+            }
+
+            function t(e) {
+                n();
+                for (var t, r = 0; t = v[r]; r++) {
+                    var a = e(t.target), i = a.closest("a")[0];
+                    if ("click" == t.type && i) {
+                        var o = e.data(i, "events"), u = o && o.click, c = !i.hostname.match(g) || !i.href.match(/#$/);
+                        if (!u && c) {
+                            window.location = i.href;
+                            continue
+                        }
+                    }
+                    a.trigger(e.event.fix(t))
+                }
+                window.swiftActionQueue.wasFlushed = !0
+            }
+
+            function r() {
+                for (var e in b) if ("all" != e) for (var t = b[e], r = 0; r < t.length; r++) console.log("actionQueue", c(t[r]))
+            }
+
+            function n() {
+                clearTimeout(w);
+                for (var e, t = 0; e = h[t]; t++) document["on" + e] = null
+            }
+
+            function a(e) {
+                if (!e.target) return !1;
+                var t = e.target, r = (t.tagName || "").toLowerCase();
+                if (e.metaKey) return !1;
+                if (e.shiftKey && "a" == r) return !1;
+                if (t.hostname && !t.hostname.match(g)) return !1;
+                if (e.type.match(p) && s(t)) return !1;
+                if ("label" == r) {
+                    var n = t.getAttribute("for");
+                    if (n) {
+                        var a = document.getElementById(n);
+                        if (a && f(a)) return !1
+                    } else for (var i, o = 0; i = t.childNodes[o]; o++) if (f(i)) return !1
+                }
+                return !0
+            }
+
+            function i(e, t) {
+                t.bucket = e, b[e].push(t)
+            }
+
+            function o(e) {
+                var t = {};
+                for (var r in e) t[r] = e[r];
+                return t
+            }
+
+            function u(e) {
+                for (; e && e != document.body;) {
+                    if ("A" == e.tagName) return e;
+                    e = e.parentNode
+                }
+            }
+
+            function c(e) {
+                var t = [];
+                e.bucket && t.push("[" + e.bucket + "]"), t.push(e.type);
+                var r, n, a = e.target, i = u(a), o = "", c = e.timestamp && e.timestamp - d;
+                return "click" === e.type && i ? (r = i.className.trim().replace(/\s+/g, "."), n = i.id.trim(), o = /[^#]$/.test(i.href) ? " (" + i.href + ")" : "", a = '"' + i.innerText.replace(/\n+/g, " ").trim() + '"') : (r = a.className.trim().replace(/\s+/g, "."), n = a.id.trim(), a = a.tagName.toLowerCase(), e.keyCode && (a = String.fromCharCode(e.keyCode) + " : " + a)), t.push(a + o + (n && "#" + n) + (!n && r ? "." + r : "")), c && t.push(c), t.join(" ")
+            }
+
+            function f(e) {
+                var t = (e.tagName || "").toLowerCase();
+                return "input" == t && "checkbox" == e.getAttribute("type")
+            }
+
+            function s(e) {
+                var t = (e.tagName || "").toLowerCase();
+                return "textarea" == t || "input" == t && "text" == e.getAttribute("type") || "true" == e.getAttribute("contenteditable")
+            }
+
+            for (var m, d = (new Date).getTime(), l = 1e4, g = /^([^\.]+\.)*twitter\.com$/, p = /^key/, h = ["click", "keydown", "keypress", "keyup"], v = [], w = null, y = !0, b = {
+                captured: [],
+                ignored: [],
+                direct: [],
+                all: []
+            }, k = 0; m = h[k]; k++) document["on" + m] = e;
+            w = setTimeout(function () {
+                y = !1
+            }, l), window.swiftActionQueue = {buckets: b, flush: t, logActions: r, wasFlushed: !1}
+        }();
+    </script>
+    <script id="composition_state" nonce="">
+        !function () {
+            function t(t) {
+                t.target.setAttribute("data-in-composition", "true")
+            }
+
+            function n(t) {
+                t.target.removeAttribute("data-in-composition")
+            }
+
+            document.addEventListener && (document.addEventListener("compositionstart", t, !1), document.addEventListener("compositionend", n, !1))
+        }();
+    </script>
+
+    <link rel="stylesheet" href="https://abs.twimg.com/a/1518842147/css/t1/twitter_core.bundle.css"
+          class="coreCSSBundles">
+    <link rel="stylesheet" class="moreCSSBundles"
+          href="https://abs.twimg.com/a/1518842147/css/t1/twitter_more_1.bundle.css">
+    <link rel="stylesheet" class="moreCSSBundles"
+          href="https://abs.twimg.com/a/1518842147/css/t1/twitter_more_2.bundle.css">
+
+    <link rel="dns-prefetch" href="https://pbs.twimg.com">
+    <link rel="dns-prefetch" href="https://t.co">
+    <link rel="preload" href="https://abs.twimg.com/k/zh-cn/init.zh-cn.520b1b8e3938d76b97e2.js" as="script">
+    <link rel="preload" href="https://abs.twimg.com/k/zh-cn/0.commons.zh-cn.bd005e1a17f59aff1c2d.js" as="script">
+    <link rel="preload" href="https://abs.twimg.com/k/zh-cn/8.pages_home.zh-cn.bcbf1f8bebc7cb1cb859.js" as="script">
+    <style type="text/css" abt="234"></style>
+    <title>古德美尔 (@goodmeier) | Twitter</title>
+
+
+    <meta name="msapplication-TileImage" content="//abs.twimg.com/favicons/win8-tile-144.png">
+    <meta name="msapplication-TileColor" content="#00aced">
+
+
+    <link rel="mask-icon" sizes="any" href="https://abs.twimg.com/a/1518842147/icons/favicon.svg" color="#1da1f2">
+
+    <link rel="shortcut icon" href="//abs.twimg.com/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="https://abs.twimg.com/icons/apple-touch-icon-192x192.png" sizes="192x192">
+
+    <link rel="manifest" href="/manifest.json">
+
+
+    <meta name="swift-page-name" id="swift-page-name" content="home">
+    <meta name="swift-page-section" id="swift-section-name" content="home">
+
+    <link rel="canonical" href="https://twitter.com/goodmeier">
+
+
+    <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Twitter">
+
+    <link id="async-css-placeholder">
+
+    <style id="user-style-goodmeier">
+
+
+        a,
+        a:hover,
+        a:focus,
+        a:active {
+            color: #1DA1F2;
+        }
+
+        .u-textUserColor,
+        .u-textUserColorHover:hover,
+        .u-textUserColorHover:hover .ProfileTweet-actionCount,
+        .u-textUserColorHover:focus {
+            color: #1DA1F2 !important;
+        }
+
+        .u-borderUserColor,
+        .u-borderUserColorHover:hover,
+        .u-borderUserColorHover:focus {
+            border-color: #1DA1F2 !important;
+        }
+
+        .u-bgUserColor,
+        .u-bgUserColorHover:hover,
+        .u-bgUserColorHover:focus {
+            background-color: #1DA1F2 !important;
+        }
+
+        .u-dropdownUserColor > li:hover,
+        .u-dropdownUserColor > li:focus,
+        .u-dropdownUserColor > li > button:hover,
+        .u-dropdownUserColor > li > button:focus,
+        .u-dropdownUserColor > li > a:focus,
+        .u-dropdownUserColor > li > a:hover {
+            color: #fff !important;
+            background-color: #1DA1F2 !important;
+        }
+
+        .u-boxShadowInsetUserColorHover:hover,
+        .u-boxShadowInsetUserColorHover:focus {
+            box-shadow: inset 0 0 0 5px #1DA1F2 !important;
+        }
+
+        .u-dropdownOpenUserColor.dropdown.open .dropdown-toggle {
+            color: #1DA1F2;
+        }
+
+        .u-textUserColorLight {
+            color: #A4D9F9 !important;
+        }
+
+        .u-borderUserColorLight,
+        .u-borderUserColorLightFocus:focus,
+        .u-borderUserColorLightHover:hover,
+        .u-borderUserColorLightHover:focus {
+            border-color: #A4D9F9 !important;
+        }
+
+        .u-bgUserColorLight {
+            background-color: #A4D9F9 !important;
+        }
+
+        .u-boxShadowUserColorLighterFocus:focus {
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.05), inset 0 1px 2px rgba(29, 161, 242, 0.25) !important;
+        }
+
+        .u-textUserColorLightest {
+            color: #E8F5FD !important;
+        }
+
+        .u-borderUserColorLightest {
+            border-color: #E8F5FD !important;
+        }
+
+        .u-bgUserColorLightest {
+            background-color: #E8F5FD !important;
+        }
+
+        .u-textUserColorLighter {
+            color: #C6E7FB !important;
+        }
+
+        .u-borderUserColorLighter {
+            border-color: #C6E7FB !important;
+        }
+
+        .u-bgUserColorLighter {
+            background-color: #C6E7FB !important;
+        }
+
+        .u-bgUserColorDarkHover:hover {
+            background-color: #1C88CC !important;
+        }
+
+        .u-borderUserColorDark {
+            border-color: #1C88CC !important;
+        }
+
+        .u-bgUserColorDarkerActive:active {
+            background-color: #1C70A6 !important;
+        }
+
+        a,
+        .btn-link,
+        .btn-link:focus,
+        .icon-btn,
+        .pretty-link b,
+        .pretty-link:hover s,
+        .pretty-link:hover b,
+        .pretty-link:focus s,
+        .pretty-link:focus b,
+        .metadata a:hover,
+        .metadata a:focus,
+        a.account-group:hover .fullname,
+        a.account-group:focus .fullname,
+        .account-summary:focus .fullname,
+        .message .message-text a,
+        .message .message-text button,
+        .stats a strong,
+        .plain-btn:hover,
+        .plain-btn:focus,
+        .dropdown.open .user-dropdown.plain-btn,
+        .open > .plain-btn,
+        #global-actions .new:before,
+        .module .list-link:hover,
+        .module .list-link:focus,
+        .stats a:hover,
+        .stats a:hover strong,
+        .stats a:focus,
+        .stats a:focus strong,
+        .find-friends-sources li:hover .source,
+        .stream-item a:hover .fullname,
+        .stream-item a:focus .fullname,
+        .stream-item .view-all-supplements:hover,
+        .stream-item .view-all-supplements:focus,
+        .tweet .time a:hover,
+        .tweet .time a:focus,
+        .tweet .details.with-icn b,
+        .tweet .details.with-icn .Icon,
+        .stream-item:hover .original-tweet .details b,
+        .stream-item .original-tweet.focus .details b,
+        .stream-item.open .original-tweet .details b,
+        .client-and-actions a:hover,
+        .client-and-actions a:focus,
+        .dismiss-btn:hover b,
+        .tweet .context .pretty-link:hover s,
+        .tweet .context .pretty-link:hover b,
+        .tweet .context .pretty-link:focus s,
+        .tweet .context .pretty-link:focus b,
+        .list .username a:hover,
+        .list .username a:focus,
+        .list-membership-container .create-a-list,
+        .list-membership-container .create-a-list:hover,
+        .new-tweets-bar,
+        .card .list-details a:hover,
+        .card .list-details a:focus,
+        .card .card-body:hover .attribution,
+        .card .card-body .attribution:focus {
+            color: #1DA1F2;
+        }
+
+        #global-actions > li > a {
+            border-bottom-color: #1DA1F2;
+        }
+
+        #global-actions > li:hover > a,
+        #global-actions > li > a:focus,
+        #global-actions > li.active .text,
+        .DashUserDropdown.dropdown-menu .nightmode-toggle .Icon,
+        .nav.right-actions > li > a:hover,
+        .nav.right-actions > li > a:focus {
+            color: #1DA1F2;
+        }
+
+        #global-actions .people.new:before {
+            content: none;
+        }
+
+        .FoundMediaSearch--keyboard .FoundMediaSearch-focusable.is-focused {
+            border-color: #1DA1F2;
+        }
+
+        .photo-selector:hover .btn,
+        .icon-btn:hover,
+        .icon-btn:active,
+        .icon-btn.active,
+        .icon-btn.enabled {
+            border-color: #1DA1F2;
+            border-color: rgba(29, 161, 242, 0.4);
+            color: #1DA1F2;
+        }
+
+        .photo-selector:hover .btn,
+        .icon-btn:hover {
+            background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(29, 161, 242, 0.1));
+        }
+
+        .icon-btn.disabled,
+        .icon-btn.disabled:hover,
+        .icon-btn[disabled],
+        .icon-btn[aria-disabled=true] {
+            color: #1DA1F2;
+        }
+
+        .EdgeButton--primary,
+        .EdgeButton--primary:focus {
+            background-color: #4AB3F4;
+            border-color: transparent;
+        }
+
+        .EdgeButton--primary:hover,
+        .EdgeButton--primary:active {
+            background-color: #1DA1F2;
+            border-color: #1DA1F2;
+        }
+
+        .EdgeButton--primary:focus {
+            box-shadow: 0 0 0 2px #FFFFFF,
+            0 0 0 4px #A4D9F9;
+        }
+
+        .EdgeButton--primary:active {
+            box-shadow: 0 0 0 2px #FFFFFF,
+            0 0 0 4px #4AB3F4;
+        }
+
+        .EdgeButton--secondary,
+        .EdgeButton--secondary:hover,
+        .EdgeButton--secondary:focus,
+        .EdgeButton--secondary:active {
+            border-color: #1DA1F2;
+            color: #1DA1F2;
+        }
+
+        .EdgeButton--secondary:hover,
+        .EdgeButton--secondary:active {
+            background-color: #E8F5FD;
+        }
+
+        .EdgeButton--secondary:focus {
+            box-shadow: 0 0 0 2px #FFFFFF,
+            0 0 0 4px rgba(29, 161, 242, 0.4);
+        }
+
+        .EdgeButton--secondary:active {
+            box-shadow: 0 0 0 2px #FFFFFF,
+            0 0 0 4px #1DA1F2;
+        }
+
+        .EdgeButton--invertedPrimary {
+            color: #1DA1F2 !important;
+        }
+
+        .EdgeButton--invertedPrimary:focus {
+            box-shadow: 0 0 0 2px #1DA1F2,
+            0 0 0 4px #A4D9F9;
+        }
+
+        .EdgeButton--invertedPrimary:active {
+            box-shadow: 0 0 0 2px #1DA1F2,
+            0 0 0 4px #FFFFFF;
+        }
+
+        .EdgeButton--invertedSecondary {
+            background-color: #1DA1F2;
+        }
+
+        .EdgeButton--invertedSecondary:hover {
+            background-color: #4AB3F4;
+        }
+
+        .EdgeButton--invertedSecondary:focus {
+            box-shadow: 0 0 0 2px #1DA1F2,
+            0 0 0 4px #A4D9F9;
+        }
+
+        .EdgeButton--invertedSecondary:active {
+            box-shadow: 0 0 0 2px #1DA1F2,
+            0 0 0 4px #FFFFFF;
+        }
+
+        .btn:focus,
+        .btn.focus,
+        .Button:focus,
+        .EmojiPicker-item.is-focused,
+        .EmojiPicker .EmojiCategoryIcon:focus,
+        .EmojiPicker-skinTone:focus + .EmojiPicker-skinToneSwatch,
+        a:focus > img:first-child:last-child,
+        button:focus {
+            box-shadow: 0 0 0 2px #FFFFFF,
+            0 0 2px 4px rgba(29, 161, 242, 0.4);
+        }
+
+        .selected-stream-item:focus {
+            box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.4);
+        }
+
+        .js-navigable-stream.stream-table-view .selected-stream-item[tabindex="-1"]:focus {
+            outline: 3px solid rgba(29, 161, 242, 0.4) !important;
+        }
+
+        .js-navigable-stream.stream-table-view .selected-stream-item:focus {
+            box-shadow: none;
+        }
+
+        .global-dm-nav.new.with-count .dm-new .count-inner {
+            background: #1DA1F2;
+        }
+
+        .global-nav .people .count .count-inner {
+            background: #1DA1F2;
+        }
+
+        .dropdown-menu li > a:hover,
+        .dropdown-menu li > a:focus,
+        .dropdown-menu .dropdown-link:hover,
+        .dropdown-menu .dropdown-link:focus,
+        .dropdown-menu .dropdown-link.is-focused,
+        .dropdown-menu li:hover .dropdown-link,
+        .dropdown-menu li:focus .dropdown-link,
+        .dropdown-menu .selected a,
+        .dropdown-menu .dropdown-link.selected {
+            background-color: #1DA1F2 !important;
+        }
+
+        /* for items in typeahead dropdown menu on logged in pages */
+        .dropdown-menu .typeahead-items li > a:focus,
+        .dropdown-menu .typeahead-items li > a:hover,
+        .dropdown-menu .typeahead-items .selected,
+        .dropdown-menu .typeahead-items .selected a {
+            background-color: #E8F5FD !important;
+            color: #1DA1F2 !important;
+        }
+
+        .typeahead a:hover,
+        .typeahead a:hover strong,
+        .typeahead a:hover .fullname,
+        .typeahead .selected a,
+        .typeahead .selected strong,
+        .typeahead .selected .fullname,
+        .typeahead .selected .Icon--close {
+            color: #1DA1F2 !important;
+        }
+
+        .home-tweet-box,
+        .LiveVideo-tweetBox,
+        .RetweetDialog-commentBox {
+            background-color: #E8F5FD;
+        }
+
+        .top-timeline-tweetbox .timeline-tweet-box .tweet-form.condensed .tweet-box {
+            color: #1DA1F2;
+        }
+
+        .RichEditor,
+        .TweetBoxAttachments {
+            border-color: #C6E7FB;
+        }
+
+        input:focus,
+        textarea:focus,
+        div[contenteditable="true"]:focus,
+        div[contenteditable="true"].fake-focus,
+        div[contenteditable="plaintext-only"]:focus,
+        div[contenteditable="plaintext-only"].fake-focus {
+            border-color: #A4D9F9;
+            box-shadow: inset 0 0 0 1px rgba(29, 161, 242, 0.7);
+        }
+
+        .tweet-box textarea:focus,
+        .tweet-box input[type=text],
+        .currently-dragging .tweet-form.is-droppable .tweet-drag-help,
+        .tweet-box[contenteditable="true"]:focus,
+        .RichEditor.is-fakeFocus,
+        .RichEditor.is-fakeFocus ~ .TweetBoxAttachments {
+            border-color: #A4D9F9;
+            box-shadow: 0 0 0 1px #A4D9F9;
+        }
+
+        .MomentCapsuleItem.selected-stream-item:focus {
+            box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.4);
+        }
+
+        s,
+        .pretty-link:hover s,
+        .pretty-link:focus s,
+        .stream-item-activity-notification .latest-tweet .tweet-row a:hover s,
+        .stream-item-activity-notification .latest-tweet .tweet-row a:focus s {
+            color: #1DA1F2;
+        }
+
+        .vellip,
+        .vellip:before,
+        .vellip:after,
+        .conversation-module > li:after,
+        .conversation-module > li:before,
+        .ThreadedConversation--loneTweet:after,
+        .ThreadedConversation-tweet:not(.is-hiddenAncestor) ~ .ThreadedConversation-tweet:before,
+        .ThreadedConversation-tweet:after,
+        .ThreadedConversation-moreReplies:before,
+        .ThreadedConversation-viewOther:before,
+        .ThreadedConversation-unavailableTweet:before,
+        .ThreadedConversation-unavailableTweet:after,
+        .ThreadedConversation--permalinkTweetWithAncestors:before,
+        .mini-avatar-with-thread:before,
+        .permalink.self-thread-permalink-with-descendant .permalink-tweet-container:after,
+        .permalink.self-thread-permalink-with-descendant .inline-reply-tweetbox-container:after {
+            border-color: #A4D9F9;
+        }
+
+        .tweet .sm-reply,
+        .tweet .sm-rt,
+        .tweet .sm-fav,
+        .tweet .sm-image,
+        .tweet .sm-video,
+        .tweet .sm-audio,
+        .tweet .sm-geo,
+        .tweet .sm-in,
+        .tweet .sm-trash,
+        .tweet .sm-more,
+        .tweet .sm-page,
+        .tweet .sm-embed,
+        .tweet .sm-summary,
+        .tweet .sm-chat,
+        .timelines-navigation .active .profile-nav-icon,
+        .timelines-navigation .profile-nav-icon:hover,
+        .timelines-navigation .profile-nav-link:focus .profile-nav-icon,
+        .sm-top-tweet {
+            background-color: #1DA1F2;
+        }
+
+        .enhanced-mini-profile .mini-profile .profile-summary {
+            background-image: url(https://pbs.twimg.com/profile_banners/2836787209/1483025570/mobile);
+        }
+
+        #global-tweet-dialog .modal-header,
+        #Tweetstorm-dialog .modal-header {
+            border-bottom: solid 1px rgba(29, 161, 242, 0.25);
+        }
+
+        #global-tweet-dialog .modal-tweet-form-container,
+        #Tweetstorm-dialog .modal-body {
+            background-color: #1DA1F2;
+            background: rgba(29, 161, 242, 0.1);
+        }
+
+        .TweetstormDialog-reply-context .tweet-box-avatar:after,
+        .TweetstormDialog-reply-context .tweet-box-avatar:before,
+        .TweetstormDialog-tweet-box .tweet-box-avatar:after,
+        .TweetstormDialog-tweet-box .tweet-box-avatar:before {
+            border-color: #A4D9F9;
+        }
+
+        .global-nav .search-input:focus,
+        .global-nav .search-input.focus {
+            border: 2px solid #1DA1F2;
+        }
+
+        }
+
+        .inline-reply-tweetbox {
+            background-color: #E8F5FD;
+        }
+
+    </style>
+
+
+    <style id="user-style-goodmeier-header-img" class="js-user-style-header-img">
+
+        body.user-style-goodmeier .enhanced-mini-profile .mini-profile .profile-summary {
+            background-image: url(https://pbs.twimg.com/profile_banners/2836787209/1483025570/web);
+        }
+
+        .DashboardProfileCard-bg {
+            background-image: url(https://pbs.twimg.com/profile_banners/2836787209/1483025570/600x200);
+        }
+
+    </style>
+
+
+    <script>//console.log('a')
+    </script>
+    <script>doAdblock();
+
+    function doAdblock() {
+        (function () {
+            function A() {
+            }
+
+            A.prototype = {
+                rules: {
+                    'pps_pps': {
+                        'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                        'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+                    },
+                    '17173_in': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_in_20150522.swf"
+                    },
+                    '17173_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_out_20150522.swf"
+                    },
+                    '17173_live': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173_stream_20150522.swf"
+                    },
+                    '17173_live_out': {
+                        'find': /http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                        'replace': "http://swf.adtchrome.com/17173.out.Live.swf"
+                    }
+                },
+                _done: null,
+                get done() {
+                    if (!this._done) {
+                        this._done = new Array();
+                    }
+                    return this._done;
+                },
+                addAnimations: function () {
+                    var style = document.createElement('style');
+                    style.type = 'text/css';
+                    style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                    document.getElementsByTagName('head')[0].appendChild(style);
+                },
+                animationsHandler: function (e) {
+                    if (e.animationName === 'playerInserted') {
+                        this.replace(e.target);
+                    }
+                },
+                replace: function (elem) {
+                    if (/http:\/\/v.youku.com\/v_show\/.*/.test(window.location.href)) {
+                        var tag = document.getElementById("playerBox").getAttribute("player")
+                        if (tag == "adt") {
+                            console.log("adt adv")
+                            return;
+                        }
+                    }
+                    if (this.done.indexOf(elem) != -1) return;
+                    this.done.push(elem);
+                    var player = elem.data || elem.src;
+                    if (!player) return;
+                    var i, find, replace = false;
+                    for (i in this.rules) {
+                        find = this.rules[i]['find'];
+                        if (find.test(player)) {
+                            replace = this.rules[i]['replace'];
+                            if ('function' === typeof this.rules[i]['preHandle']) {
+                                this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                            } else {
+                                this.reallyReplace.bind(this, elem, find, replace)();
+                            }
+                            break;
+                        }
+                    }
+                },
+                reallyReplace: function (elem, find, replace) {
+                    elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                    var b = elem.querySelector("param[name='movie']");
+                    this.reloadPlugin(elem);
+                },
+                reloadPlugin: function (elem) {
+                    var nextSibling = elem.nextSibling;
+                    var parentNode = elem.parentNode;
+                    parentNode.removeChild(elem);
+                    var newElem = elem.cloneNode(true);
+                    this.done.push(newElem);
+                    if (nextSibling) {
+                        parentNode.insertBefore(newElem, nextSibling);
+                    } else {
+                        parentNode.appendChild(newElem);
+                    }
+                },
+                init: function () {
+                    var handler = this.animationsHandler.bind(this);
+                    document.body.addEventListener('webkitAnimationStart', handler, false);
+                    document.body.addEventListener('msAnimationStart', handler, false);
+                    document.body.addEventListener('oAnimationStart', handler, false);
+                    document.body.addEventListener('animationstart', handler, false);
+                    this.addAnimations();
+                }
+            };
+            new A().init();
+        })();
+    }
+
+    // 20140730
+    (function cnbeta() {
+        if (document.URL.indexOf('cnbeta.com') >= 0) {
+            var elms = document.body.querySelectorAll("p>embed");
+            Array.prototype.forEach.call(elms, function (elm) {
+                elm.style.marginLeft = "0px";
+            });
+        }
+    })();
+    //baidu
+    if (document.URL.indexOf('www.baidu.com') >= 0) {
+        if (document && document.getElementsByTagName && document.getElementById && document.body) {
+            var aa = function () {
+                var all = document.body.querySelectorAll("#content_left div,#content_left table");
+                for (var i = 0; i < all.length; i++) {
+                    if (/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))) {
+                        all[i].style.display = "none";
+                        all[i].style.visibility = 'hidden';
+                    }
+                }
+                all = document.body.querySelectorAll('.result.c-container[id="1"]');
+                //if(all.length == 1) return;
+                for (var i = 0; i < all.length; i++) {
+                    if (all[i].innerHTML && all[i].innerHTML.indexOf('广告') > -1) {
+                        all[i].style.display = "none";
+                        all[i].style.visibility = 'hidden';
+                    }
+                }
+            }
+            aa();
+            document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified', aa)
+        }
+        ;
+    }
+    // 20140922
+    (function kill_360() {
+        if (document.URL.indexOf('so.com') >= 0) {
+            document.getElementById("e_idea_pp").style.display = none;
+        }
+    })();
+    if (document.URL.indexOf("tv.sohu.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    if (document.URL.indexOf("56.com") >= 0) {
+        if (document.cookie.indexOf("fee_status=true") == -1) {
+            document.cookie = 'fee_status=true'
+        }
+        ;
+    }
+    if (document.URL.indexOf("iqiyi.com") >= 0) {
+        if (document.cookie.indexOf("player_forcedType=h5_VOD") == -1) {
+            document.cookie = 'player_forcedType=h5_VOD'
+            if (localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime) < 60000) {
+                console.log('no reload')
+            } else {
+                location.reload()
+                localStorage.reloadTime = Date.now();
+            }
+        }
+    }
+    </script>
+    <style type="text/css">object, embed {
+        -webkit-animation-duration: .001s;
+        -webkit-animation-name: playerInserted;
+        -ms-animation-duration: .001s;
+        -ms-animation-name: playerInserted;
+        -o-animation-duration: .001s;
+        -o-animation-name: playerInserted;
+        animation-duration: .001s;
+        animation-name: playerInserted;
+    }
+
+    @-webkit-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-ms-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @-o-keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes playerInserted {
+        from {
+            opacity: 0.99;
+        }
+        to {
+            opacity: 1;
+        }
+    }</style>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://abs.twimg.com/k/zh-cn/0.commons.zh-cn.bd005e1a17f59aff1c2d.js"></script>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://abs.twimg.com/k/zh-cn/8.pages_home.zh-cn.bcbf1f8bebc7cb1cb859.js"></script>
+    <style type="text/css" id="hidden-dms"></style>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://abs.twimg.com/k/zh-cn/4.pages_who_to_follow.zh-cn.5b0e22a1c9a527acc902.js"></script>
+    <style type="text/css" id="hidden-dms"></style>
+    <style type="text/css" id="hidden-dms"></style>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://abs.twimg.com/k/zh-cn/14.video_player_a.zh-cn.0c877e1348922861027b.js"></script>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://abs.twimg.com/k/zh-cn/15.hls.js.zh-cn.3033bb40445d0bf6a090.js"></script>
+    <style id="scrollbar-width">
+        .compensate-for-scrollbar,
+        .modal-enabled,
+        .modal-enabled .global-nav-inner,
+        .profile-editing,
+        .profile-editing .global-nav-inner,
+        .overlay-enabled,
+        .overlay-enabled .global-nav-inner,
+        .grid-enabled,
+        .grid-enabled .global-nav-inner,
+        .gallery-enabled,
+        .gallery-enabled .global-nav-inner {
+            margin-right: 17px
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://abs.twimg.com/k/zh-cn/6.pages_permalink.zh-cn.609da4ec4b0bc0513024.js"></script>
+    <script type="text/javascript" charset="utf-8" async=""
+            src="https://abs.twimg.com/k/zh-cn/3.pages_profile.zh-cn.612261225ec9ec8a783a.js"></script>
+    <style type="text/css" id="hidden-dms"></style>
+</head>
+<body class="no-nav-banners three-col logged-in user-style-goodmeier ms-windows asian zh-cn enhanced-mini-profile ProfilePage ProfilePage--withWarning supports-drag-and-drop"
+      data-fouc-class-names="swift-loading no-nav-banners" dir="ltr">
+<script id="swift_loading_indicator" nonce="">
+    document.body.className = document.body.className + " " + document.body.getAttribute("data-fouc-class-names");
+</script>
+
+<div id="doc" class="route-profile">
+    <div id="page-outer">
+        <div id="page-container" class="AppContent">
+
+
+            <div class="AppContainer">
+                <div id="timeline" class="ProfileTimeline ">
+                    <div class="stream-container  js-request-more-stream-items"
+                         data-max-position="966655937850175489">
+
+                        <div class="stream">
+                            <div class="tweet js-stream-tweet js-actionable-tweet js-profile-popup-actionable dismissible-content original-tweet js-original-tweet my-tweet has-cards has-content">
+
+
+                                <div class="stream-item-footer">
+
+
+                                    <div class="ProfileTweet-actionList js-actions"
+                                         role="group" aria-label="发推行为">
+                                        <div class="ProfileTweet-action ProfileTweet-action--favorite js-toggleState">
+                                            <button class="ProfileTweet-actionButton js-actionButton js-actionFavorite"
+                                                    type="button"
+                                                    aria-describedby="profile-tweet-action-favorite-count-aria-966655937850175489">
+                                                <div class="IconContainer js-tooltip"
+                                                     data-original-title="喜欢">
+                                                                                    <span role="presentation"
+                                                                                          class="Icon Icon--heart Icon--medium"></span>
+                                                    <div class="HeartAnimation"></div>
+                                                    <span class="u-hiddenVisually">喜欢</span>
+                                                </div>
+                                                <span class="ProfileTweet-actionCount"
+                                                      data-tweet-stat-count="1">
+    <span class="ProfileTweet-actionCountForPresentation" aria-hidden="true">1</span>
+  </span>
+
+                                            </button>
+                                            <button class="ProfileTweet-actionButtonUndo ProfileTweet-action--unfavorite u-linkClean js-actionButton js-actionFavorite"
+                                                    type="button">
+                                                <div class="IconContainer js-tooltip"
+                                                     data-original-title="撤销喜欢">
+                                                                                    <span role="presentation"
+                                                                                          class="Icon Icon--heart Icon--medium"></span>
+                                                    <div class="HeartAnimation"></div>
+                                                    <span class="u-hiddenVisually">喜欢</span>
+                                                </div>
+                                                <span class="ProfileTweet-actionCount"
+                                                      data-tweet-stat-count="1">
+    <span class="ProfileTweet-actionCountForPresentation" aria-hidden="true">1</span>
+  </span>
+
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<input type="hidden" id="init-data" class="json-data"
+       value="{&quot;keyboardShortcuts&quot;:[{&quot;name&quot;:&quot;\u64cd\u4f5c&quot;,&quot;description&quot;:&quot;\u5e38\u7528\u529f\u80fd\u5feb\u6377\u952e&quot;,&quot;shortcuts&quot;:[{&quot;keys&quot;:[&quot;n&quot;],&quot;description&quot;:&quot;\u65b0\u63a8\u6587&quot;},{&quot;keys&quot;:[&quot;l&quot;],&quot;description&quot;:&quot;\u559c\u6b22&quot;},{&quot;keys&quot;:[&quot;r&quot;],&quot;description&quot;:&quot;\u56de\u590d&quot;},{&quot;keys&quot;:[&quot;t&quot;],&quot;description&quot;:&quot;\u8f6c\u63a8&quot;},{&quot;keys&quot;:[&quot;m&quot;],&quot;description&quot;:&quot;\u79c1\u4fe1&quot;},{&quot;keys&quot;:[&quot;u&quot;],&quot;description&quot;:&quot;\u9690\u85cf\u7528\u6237&quot;},{&quot;keys&quot;:[&quot;b&quot;],&quot;description&quot;:&quot;\u5c4f\u853d\u7528\u6237&quot;},{&quot;keys&quot;:[&quot;Enter&quot;],&quot;description&quot;:&quot;\u67e5\u770b\u63a8\u6587\u8be6\u60c5&quot;},{&quot;keys&quot;:[&quot;o&quot;],&quot;description&quot;:&quot;\u5c55\u5f00\u7167\u7247&quot;},{&quot;keys&quot;:[&quot;\/&quot;],&quot;description&quot;:&quot;\u641c\u7d22&quot;},{&quot;keys&quot;:[&quot;Ctrl&quot;,&quot;Enter&quot;],&quot;description&quot;:&quot;\u53d1\u9001\u63a8\u6587&quot;}]},{&quot;name&quot;:&quot;\u5bfc\u822a&quot;,&quot;description&quot;:&quot;\u7528\u4e8e\u65f6\u95f4\u7ebf\u9879\u76ee\u5bfc\u822a\u7684\u5feb\u6377\u952e&quot;,&quot;shortcuts&quot;:[{&quot;keys&quot;:[&quot;?&quot;],&quot;description&quot;:&quot;\u8be5\u83dc\u5355&quot;},{&quot;keys&quot;:[&quot;j&quot;],&quot;description&quot;:&quot;\u4e0b\u4e00\u6761\u63a8\u6587&quot;},{&quot;keys&quot;:[&quot;k&quot;],&quot;description&quot;:&quot;\u4e0a\u4e00\u6761\u63a8\u6587&quot;},{&quot;keys&quot;:[&quot;Space&quot;],&quot;description&quot;:&quot;\u5411\u4e0b\u7ffb\u9875&quot;},{&quot;keys&quot;:[&quot;.&quot;],&quot;description&quot;:&quot;\u8f7d\u5165\u65b0\u63a8\u6587&quot;}]},{&quot;name&quot;:&quot;\u65f6\u95f4\u7ebf&quot;,&quot;description&quot;:&quot;\u7528\u4e8e\u5207\u6362\u5230\u4e0d\u540c\u65f6\u95f4\u7ebf\u6216\u9875\u9762\u7684\u5feb\u6377\u952e&quot;,&quot;shortcuts&quot;:[{&quot;keys&quot;:[&quot;g&quot;,&quot;h&quot;],&quot;description&quot;:&quot;\u4e3b\u9875&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;o&quot;],&quot;description&quot;:&quot;\u77ac\u95f4&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;n&quot;],&quot;description&quot;:&quot;\u901a\u77e5&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;r&quot;],&quot;description&quot;:&quot;\u63d0\u53ca&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;p&quot;],&quot;description&quot;:&quot;\u4e2a\u4eba\u8d44\u6599&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;l&quot;],&quot;description&quot;:&quot;\u559c\u6b22&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;i&quot;],&quot;description&quot;:&quot;\u5217\u8868&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;m&quot;],&quot;description&quot;:&quot;\u79c1\u4fe1&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;s&quot;],&quot;description&quot;:&quot;\u8bbe\u7f6e&quot;},{&quot;keys&quot;:[&quot;g&quot;,&quot;u&quot;],&quot;description&quot;:&quot;\u524d\u5f80\u7528\u6237\u2026&quot;}]}],&quot;baseFoucClass&quot;:&quot;swift-loading&quot;,&quot;bodyFoucClassNames&quot;:&quot;swift-loading no-nav-banners&quot;,&quot;assetsBasePath&quot;:&quot;https:\/\/abs.twimg.com\/a\/1518842147\/&quot;,&quot;assetVersionKey&quot;:&quot;c70303&quot;,&quot;emojiAssetsPath&quot;:&quot;https:\/\/abs.twimg.com\/emoji\/v2\/72x72\/&quot;,&quot;environment&quot;:&quot;production&quot;,&quot;formAuthenticityToken&quot;:&quot;9777d01b398b120d4606afd8c52d4e8e98b5d050&quot;,&quot;loggedIn&quot;:true,&quot;screenName&quot;:&quot;goodmeier&quot;,&quot;fullName&quot;:&quot;\u53e4\u5fb7\u7f8e\u5c14&quot;,&quot;userId&quot;:&quot;2836787209&quot;,&quot;guestId&quot;:&quot;146543574265161694&quot;,&quot;createdAt&quot;:1412173594423,&quot;needsPhoneVerification&quot;:false,&quot;allowAdsPersonalization&quot;:true,&quot;scribeBufferSize&quot;:3,&quot;pageName&quot;:&quot;home&quot;,&quot;sectionName&quot;:&quot;home&quot;,&quot;scribeParameters&quot;:{&quot;lang&quot;:&quot;zh-cn&quot;},&quot;recaptchaApiUrl&quot;:&quot;https:\/\/www.google.com\/recaptcha\/api\/js\/recaptcha_ajax.js&quot;,&quot;internalReferer&quot;:null,&quot;geoEnabled&quot;:false,&quot;typeaheadData&quot;:{&quot;accounts&quot;:{&quot;enabled&quot;:true,&quot;localQueriesEnabled&quot;:true,&quot;remoteQueriesEnabled&quot;:true,&quot;limit&quot;:6},&quot;trendLocations&quot;:{&quot;enabled&quot;:true},&quot;dmConversations&quot;:{&quot;enabled&quot;:true},&quot;followedSearches&quot;:{&quot;enabled&quot;:false},&quot;savedSearches&quot;:{&quot;enabled&quot;:true,&quot;items&quot;:[]},&quot;dmAccounts&quot;:{&quot;enabled&quot;:true,&quot;localQueriesEnabled&quot;:true,&quot;remoteQueriesEnabled&quot;:true,&quot;onlyDMable&quot;:true},&quot;mediaTagAccounts&quot;:{&quot;enabled&quot;:true,&quot;localQueriesEnabled&quot;:true,&quot;remoteQueriesEnabled&quot;:true,&quot;onlyShowUsersWithCanMediaTag&quot;:false,&quot;currentUserId&quot;:2836787209},&quot;selectedUsers&quot;:{&quot;enabled&quot;:true},&quot;prefillUsers&quot;:{&quot;enabled&quot;:true},&quot;topics&quot;:{&quot;enabled&quot;:true,&quot;localQueriesEnabled&quot;:false,&quot;remoteQueriesEnabled&quot;:true,&quot;prefetchLimit&quot;:500,&quot;limit&quot;:4},&quot;concierge&quot;:{&quot;enabled&quot;:false,&quot;localQueriesEnabled&quot;:false,&quot;remoteQueriesEnabled&quot;:false,&quot;prefetchLimit&quot;:500,&quot;limit&quot;:6},&quot;recentSearches&quot;:{&quot;enabled&quot;:true},&quot;hashtags&quot;:{&quot;enabled&quot;:true,&quot;localQueriesEnabled&quot;:false,&quot;remoteQueriesEnabled&quot;:true,&quot;prefetchLimit&quot;:500},&quot;useIndexedDB&quot;:false,&quot;showSearchAccountSocialContext&quot;:true,&quot;showDebugInfo&quot;:false,&quot;useThrottle&quot;:true,&quot;accountsOnTop&quot;:false,&quot;remoteDebounceInterval&quot;:300,&quot;remoteThrottleInterval&quot;:300,&quot;tweetContextEnabled&quot;:false,&quot;fullNameMatchingInCompose&quot;:true,&quot;topicsWithFiltersEnabled&quot;:true},&quot;dm&quot;:{&quot;notifications&quot;:false,&quot;usePushForNotifications&quot;:true,&quot;participant_max&quot;:50,&quot;welcome_message_add_to_conversation_enabled&quot;:true,&quot;poll_options&quot;:{&quot;foreground_poll_interval&quot;:3000,&quot;burst_poll_interval&quot;:3000,&quot;burst_poll_duration&quot;:300000,&quot;max_poll_interval&quot;:60000},&quot;card_prefetch&quot;:true,&quot;card_prefetch_interval_in_seconds&quot;:2000,&quot;dm_quick_reply_options_panel_dismiss_in_ms&quot;:2000,&quot;open_dm_enabled&quot;:false},&quot;autoplayDisabled&quot;:false,&quot;pushStatePageLimit&quot;:500000,&quot;routes&quot;:{&quot;profile&quot;:&quot;\/goodmeier&quot;},&quot;pushState&quot;:true,&quot;viewContainer&quot;:&quot;#page-container&quot;,&quot;href&quot;:&quot;\/&quot;,&quot;searchPathWithQuery&quot;:&quot;\/search?q=query&amp;src=typd&quot;,&quot;composeAltText&quot;:false,&quot;night_mode_activated&quot;:false,&quot;user_color&quot;:&quot;1DA1F2&quot;,&quot;deciders&quot;:{&quot;geo_picker_incident_reset&quot;:true,&quot;custom_timeline_curation&quot;:false,&quot;native_notifications&quot;:true,&quot;disable_ajax_datatype_default_to_text&quot;:false,&quot;dm_polling_frequency_in_seconds&quot;:3000,&quot;dm_granular_mute_controls&quot;:true,&quot;enable_media_tag_prefetch&quot;:true,&quot;enableMacawNymizerConversionLanding&quot;:false,&quot;hqImageUploads&quot;:false,&quot;live_pipeline_consume&quot;:true,&quot;mqImageUploads&quot;:false,&quot;partnerIdSyncEnabled&quot;:true,&quot;sruMediaCategory&quot;:true,&quot;photoSruGifLimitMb&quot;:15,&quot;promoted_logging_force_post&quot;:true,&quot;promoted_video_logging_enabled&quot;:true,&quot;pushState&quot;:true,&quot;emojiNewCategory&quot;:false,&quot;contentEditablePlainTextOnly&quot;:false,&quot;web_client_api_stats&quot;:false,&quot;web_perftown_stats&quot;:true,&quot;web_perftown_ttft&quot;:true,&quot;web_client_events_ttft&quot;:true,&quot;log_push_state_ttft_metrics&quot;:true,&quot;web_sru_stats&quot;:false,&quot;web_upload_video&quot;:true,&quot;web_upload_video_advanced&quot;:false,&quot;upload_video_size&quot;:500,&quot;useVmapVariants&quot;:false,&quot;autoplayPreviewPreroll&quot;:true,&quot;moments_home_module&quot;:false,&quot;moments_lohp_enabled&quot;:true,&quot;enableNativePush&quot;:true,&quot;autoSubscribeNativePush&quot;:false,&quot;allowWebPushVapidUpgrade&quot;:true,&quot;stickersInteractivity&quot;:true,&quot;stickersInteractivityDuringLoading&quot;:true,&quot;stickersExperience&quot;:true,&quot;dynamic_video_ads_include_long_videos&quot;:true,&quot;push_state_size&quot;:1000,&quot;live_video_media_control_enabled&quot;:false,&quot;cards2_enable_periscope_card_transition&quot;:true,&quot;use_api_for_retweet_and_unretweet&quot;:false,&quot;use_api_for_follow_and_unfollow&quot;:true,&quot;edge_probe_enabled&quot;:false,&quot;like_over_http_client&quot;:true,&quot;enable_inline_location&quot;:true,&quot;enable_tweetstorm_creation&quot;:true,&quot;enable_tweetstorm_drafts&quot;:false,&quot;enable_tweetstorm_tooltip&quot;:true,&quot;text_length_for_tweetstorm_tooltip&quot;:50,&quot;dm_report_webview_macaw_swift_enabled&quot;:true,&quot;page_title_unread_notification_count&quot;:false,&quot;page_title_badge_after_unread_tweets&quot;:20},&quot;experiments&quot;:{},&quot;toasts_dm&quot;:true,&quot;toasts_timeline&quot;:false,&quot;toasts_dm_poll_scale&quot;:60,&quot;defaultNotificationIcon&quot;:&quot;https:\/\/abs.twimg.com\/a\/1518842147\/img\/t1\/mobile\/wp7_app_icon.png&quot;,&quot;promptbirdData&quot;:{&quot;promptbirdEnabled&quot;:true,&quot;immediateTriggers&quot;:[&quot;PullToRefresh&quot;,&quot;Navigate&quot;],&quot;format&quot;:&quot;HomeTimeline&quot;},&quot;deviceEnabled&quot;:false,&quot;hasPushDevice&quot;:false,&quot;smsDeviceVerified&quot;:false,&quot;skipAutoSignupDialog&quot;:false,&quot;shouldReplaceSignupWithLogin&quot;:true,&quot;hashflagBaseUrl&quot;:&quot;https:\/\/abs.twimg.com\/hashflags\/&quot;,&quot;activeHashflags&quot;:{&quot;ライトサイド&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;growtogether&quot;:&quot;GrowTogether_v4\/GrowTogether_v4.png&quot;,&quot;nellepieghedeltempo&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;est&quot;:&quot;est_wo_2018\/est_wo_2018.png&quot;,&quot;porg&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;chinesenewyear&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;zee5launch&quot;:&quot;zeefive\/zeefive.png&quot;,&quot;スキージャンプ&quot;:&quot;skijump_WO_18\/skijump_WO_18.png&quot;,&quot;jurassicworldfallenkingdom&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;mlktoday&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;олимпийскиеигры&quot;:&quot;olympics_WO_18_v2\/olympics_WO_18_v2.png&quot;,&quot;sens&quot;:&quot;NHL_2017_2018_Senators\/NHL_2017_2018_Senators.png&quot;,&quot;livefromvegas&quot;:&quot;MGM_NYE_2017\/MGM_NYE_2017.png&quot;,&quot;teamusa&quot;:&quot;teamusa_WO_18\/teamusa_WO_18.png&quot;,&quot;스노보드&quot;:&quot;snowboard_WO_18\/snowboard_WO_18.png&quot;,&quot;xfilesunwrapped&quot;:&quot;X-Files\/X-Files.png&quot;,&quot;esseémeunatal&quot;:&quot;Natura_X-tmas_emoji_V3\/Natura_X-tmas_emoji_V3.png&quot;,&quot;オコエ&quot;:&quot;okoye_blackpanther\/okoye_blackpanther.png&quot;,&quot;스켈레톤&quot;:&quot;skeleton_WO_18\/skeleton_WO_18.png&quot;,&quot;вижн&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;告白桃&quot;:&quot;CocaColaJapanPeach\/CocaColaJapanPeach.png&quot;,&quot;scandal&quot;:&quot;TGIT_Scandal_2017_v3\/TGIT_Scandal_2017_v3.png&quot;,&quot;patinageartistique&quot;:&quot;figureskating_IW_18\/figureskating_IW_18.png&quot;,&quot;зимнийсолдат&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;sejaguerreira&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;ger&quot;:&quot;ger_wo_2018\/ger_wo_2018.png&quot;,&quot;горнолыжныйспорт&quot;:&quot;AlpineSkiing_WO_18\/AlpineSkiing_WO_18.png&quot;,&quot;saudi_aramco&quot;:&quot;Aramco_emoji\/Aramco_emoji.png&quot;,&quot;vina2018&quot;:&quot;entel2018\/entel2018.png&quot;,&quot;heretheycome&quot;:&quot;NBA_2017_18_PHI\/NBA_2017_18_PHI.png&quot;,&quot;jeremyclarkson&quot;:&quot;The_Grand_Tour_Clarkson_Emoji\/The_Grand_Tour_Clarkson_Emoji.png&quot;,&quot;新年快乐&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;عيدنا_حمد&quot;:&quot;Bahrain_National_Day_v2\/Bahrain_National_Day_v2.png&quot;,&quot;proudmarymoments&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;フリースタイルスキー&quot;:&quot;FreestyleSkiing_IW_18\/FreestyleSkiing_IW_18.png&quot;,&quot;폐회식&quot;:&quot;closingceremony_WO_18\/closingceremony_WO_18.png&quot;,&quot;oar&quot;:&quot;oar_wo_2018\/oar_wo_2018.png&quot;,&quot;twitter4me&quot;:&quot;Twitter4Me_Emoji\/Twitter4Me_Emoji.png&quot;,&quot;mrswer&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;올림픽&quot;:&quot;olympics_WO_18_v2\/olympics_WO_18_v2.png&quot;,&quot;루지&quot;:&quot;luge_WO_18\/luge_WO_18.png&quot;,&quot;mazerunner&quot;:&quot;MazeRunner1\/MazeRunner1.png&quot;,&quot;arieluyendyk&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;timesup&quot;:&quot;TimesUp\/TimesUp.png&quot;,&quot;thealienist&quot;:&quot;TNT-Alienist\/TNT-Alienist.png&quot;,&quot;vitadaporg&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;staywokeandgetout&quot;:&quot;GetOutMovie\/GetOutMovie.png&quot;,&quot;ltu&quot;:&quot;ltu_wo_2018\/ltu_wo_2018.png&quot;,&quot;프리스타일스키&quot;:&quot;FreestyleSkiing_IW_18\/FreestyleSkiing_IW_18.png&quot;,&quot;zee5meinfeelhai&quot;:&quot;zeefive\/zeefive.png&quot;,&quot;twitterトレンド大賞&quot;:&quot;Japan_Twitter_Trend_Award_EMOJI_v2\/Japan_Twitter_Trend_Award_EMOJI_v2.png&quot;,&quot;crownroyal&quot;:&quot;CrownRoyal_v2\/CrownRoyal_v2.png&quot;,&quot;lbn&quot;:&quot;lbn_wo_2018\/lbn_wo_2018.png&quot;,&quot;インクレディブルファミリー&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;tgitlife&quot;:&quot;TGIT_Popcorn_v2\/TGIT_Popcorn_v2.png&quot;,&quot;brujaescarlata&quot;:&quot;Scarlet_Witch\/Scarlet_Witch.png&quot;,&quot;スカーレットウィッチ&quot;:&quot;Scarlet_Witch\/Scarlet_Witch.png&quot;,&quot;starwarsepisodio8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;jackryan&quot;:&quot;Jack_Ryan_Superbowl_2018_v3\/Jack_Ryan_Superbowl_2018_v3.png&quot;,&quot;mortgagetranslator&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;성화봉송&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;getout&quot;:&quot;GetOutMovie\/GetOutMovie.png&quot;,&quot;eebaftas&quot;:&quot;BAFTA\/BAFTA.png&quot;,&quot;nammakarnatakafirst&quot;:&quot;congressq1\/congressq1.png&quot;,&quot;gobolts&quot;:&quot;NHL_2017_2018_Lightning\/NHL_2017_2018_Lightning.png&quot;,&quot;オリンピック聖火リレー&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;пхенчхан2018&quot;:&quot;PyeongChang_WO_18\/PyeongChang_WO_18.png&quot;,&quot;tpe&quot;:&quot;TPE_wo_2018\/TPE_wo_2018.png&quot;,&quot;jtsuperbowl&quot;:&quot;JustinTimberlake_MOTW\/JustinTimberlake_MOTW.png&quot;,&quot;gold&quot;:&quot;Gold_WO_18_v2\/Gold_WO_18_v2.png&quot;,&quot;drunkhistory&quot;:&quot;DrunkHistory2018\/DrunkHistory2018.png&quot;,&quot;archie&quot;:&quot;RiverdaleS2_2018\/RiverdaleS2_2018.png&quot;,&quot;معاك_يالأخضر&quot;:&quot;Coca-Cola_World_Cup\/Coca-Cola_World_Cup.png&quot;,&quot;periscope&quot;:&quot;Periscope\/Periscope.png&quot;,&quot;thefalcon&quot;:&quot;falcon_IW_2018\/falcon_IW_2018.png&quot;,&quot;カーリング&quot;:&quot;curling_IW_18\/curling_IW_18.png&quot;,&quot;gokingsgo&quot;:&quot;NHL_2017_2018_LAKings\/NHL_2017_2018_LAKings.png&quot;,&quot;canucks&quot;:&quot;NHL_2017_2018_Canucks\/NHL_2017_2018_Canucks.png&quot;,&quot;ned&quot;:&quot;ned_wo_2018\/ned_wo_2018.png&quot;,&quot;teammarcus&quot;:&quot;Amazon_Niche_Grand_Marcus_v2\/Amazon_Niche_Grand_Marcus_v2.png&quot;,&quot;은메달&quot;:&quot;silver_WO_18_v2\/silver_WO_18_v2.png&quot;,&quot;ifeelprettyfilm&quot;:&quot;feelpretty_v2\/feelpretty_v2.png&quot;,&quot;btnr&quot;:&quot;Auto_expo\/Auto_expo.png&quot;,&quot;tarajiphenson&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;bafta&quot;:&quot;BAFTA\/BAFTA.png&quot;,&quot;breatheonamazon&quot;:&quot;Amazon_Breathe\/Amazon_Breathe.png&quot;,&quot;lefaucon&quot;:&quot;falcon_IW_2018\/falcon_IW_2018.png&quot;,&quot;cgd&quot;:&quot;CelebsGoDating2018\/CelebsGoDating2018.png&quot;,&quot;teampapijuca&quot;:&quot;Amazon_Niche_Grand_Papi_v3\/Amazon_Niche_Grand_Papi_v3.png&quot;,&quot;italyelection2018&quot;:&quot;elezioni2018_v2\/elezioni2018_v2.png&quot;,&quot;king50&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;fullfrontalmidterms&quot;:&quot;Full_Frontal_Emoji\/Full_Frontal_Emoji.png&quot;,&quot;thelegendcontinues&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;preyatnight&quot;:&quot;thestrangers\/thestrangers.png&quot;,&quot;mon&quot;:&quot;mon_wo_2018\/mon_wo_2018.png&quot;,&quot;грут&quot;:&quot;groot_IW_2018_v2\/groot_IW_2018_v2.png&quot;,&quot;nébulaiw&quot;:&quot;nebula_IW_2018\/nebula_IW_2018.png&quot;,&quot;elezionipolitiche2018&quot;:&quot;elezioni2018_v2\/elezioni2018_v2.png&quot;,&quot;pak&quot;:&quot;pak_wo_2018\/pak_wo_2018.png&quot;,&quot;crownyourcity&quot;:&quot;CrownRoyal_v2\/CrownRoyal_v2.png&quot;,&quot;premierordre&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;killmonger&quot;:&quot;killmonger_blackpanther\/killmonger_blackpanther.png&quot;,&quot;rolltide&quot;:&quot;Alabama_CFBPlayoff_Teamv3\/Alabama_CFBPlayoff_Teamv3.png&quot;,&quot;turkeydash&quot;:&quot;Paypal_Turkey_Dash_Emoji\/Paypal_Turkey_Dash_Emoji.png&quot;,&quot;lovetwitter&quot;:&quot;LoveTwitter\/LoveTwitter.png&quot;,&quot;суперсемейка2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;bachelorabc&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;givejoeabreak&quot;:&quot;GiveJoeABreak\/GiveJoeABreak.png&quot;,&quot;teamironman&quot;:&quot;ironman_IW_2018_v3\/ironman_IW_2018_v3.png&quot;,&quot;detroitbasketball&quot;:&quot;NBA_2017_18_DET\/NBA_2017_18_DET.png&quot;,&quot;seeaustralia&quot;:&quot;TourismAustralia\/TourismAustralia.png&quot;,&quot;노르딕복합&quot;:&quot;nordic_WO_18\/nordic_WO_18.png&quot;,&quot;volvooceanrace&quot;:&quot;VolvoOceanRace\/VolvoOceanRace.png&quot;,&quot;megmurry&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;mammamia&quot;:&quot;MammaMia2\/MammaMia2.png&quot;,&quot;человекпаук&quot;:&quot;spiderman_IW_2018\/spiderman_IW_2018.png&quot;,&quot;اكتفاء&quot;:&quot;Aramco_emoji\/Aramco_emoji.png&quot;,&quot;cbj&quot;:&quot;NHL_2017_2018_BlueJackets\/NHL_2017_2018_BlueJackets.png&quot;,&quot;visione&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;breatheteaser&quot;:&quot;Amazon_Breathe\/Amazon_Breathe.png&quot;,&quot;thexfiles&quot;:&quot;X-Files\/X-Files.png&quot;,&quot;인크레더블2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;espejopublico&quot;:&quot;EspejoPublico_2017_2018\/EspejoPublico_2017_2018.png&quot;,&quot;drstrange&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;losincreíbles2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;solounoúnico&quot;:&quot;VW_Troc\/VW_Troc.png&quot;,&quot;aze&quot;:&quot;aze_WO_2018\/aze_WO_2018.png&quot;,&quot;звёздныевойныпоследниеджедаи&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;ersteordnung&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;falcon&quot;:&quot;falcon_IW_2018\/falcon_IW_2018.png&quot;,&quot;2018평창&quot;:&quot;PyeongChang_WO_18\/PyeongChang_WO_18.png&quot;,&quot;latooscuro&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;バイアスロン&quot;:&quot;Biathlon_IO_18\/Biathlon_IO_18.png&quot;,&quot;воитель&quot;:&quot;warmachine_IW_2018\/warmachine_IW_2018.png&quot;,&quot;nba&quot;:&quot;NBA_2017_18_NBA\/NBA_2017_18_NBA.png&quot;,&quot;bethechange&quot;:&quot;BeTheChange_v2\/BeTheChange_v2.png&quot;,&quot;theheatcheck&quot;:&quot;dosequis\/dosequis.png&quot;,&quot;평화올림픽&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;breatheamazon&quot;:&quot;Amazon_Breathe\/Amazon_Breathe.png&quot;,&quot;накиа&quot;:&quot;nakia_blackpanther\/nakia_blackpanther.png&quot;,&quot;viuvanegra&quot;:&quot;blackwidow_IW_2018\/blackwidow_IW_2018.png&quot;,&quot;последниеджедаи&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;unpliegueeneltiempo&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;patinagedevitesse&quot;:&quot;speedskate_WO_18\/speedskate_WO_18.png&quot;,&quot;миссискто&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;あらいぐまロケット&quot;:&quot;rocket_IW_2018_v2\/rocket_IW_2018_v2.png&quot;,&quot;халк&quot;:&quot;hulk_IW_2018_v2\/hulk_IW_2018_v2.png&quot;,&quot;goavsgo&quot;:&quot;NHL_2017_2018_COAvalanche\/NHL_2017_2018_COAvalanche.png&quot;,&quot;wannasprite&quot;:&quot;Sprite_Q1_2018\/Sprite_Q1_2018.png&quot;,&quot;letsgoflyers&quot;:&quot;NHL_2017_2018_PhillyFlyers\/NHL_2017_2018_PhillyFlyers.png&quot;,&quot;biathlon&quot;:&quot;Biathlon_IO_18\/Biathlon_IO_18.png&quot;,&quot;ตรุษจีน&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;yearofthedog&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;amtodmbfn&quot;:&quot;BuzzFeedMorning_v3\/BuzzFeedMorning_v3.png&quot;,&quot;thebachelorabc&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;sxswestworld&quot;:&quot;Westworld2\/Westworld2.png&quot;,&quot;エムバク&quot;:&quot;mbaku_v2\/mbaku_v2.png&quot;,&quot;капитанамерика&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;porgs&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;createyourstyle&quot;:&quot;Schwarzkopf_2018\/Schwarzkopf_2018.png&quot;,&quot;mammamia2movie&quot;:&quot;MammaMia2\/MammaMia2.png&quot;,&quot;окое&quot;:&quot;okoye_blackpanther\/okoye_blackpanther.png&quot;,&quot;поргисила&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;richardhammond&quot;:&quot;The_Grand_Tour_Hammond_Emoji\/The_Grand_Tour_Hammond_Emoji.png&quot;,&quot;thegrandtour&quot;:&quot;The_Grand_Tour_official_show_emoji\/The_Grand_Tour_official_show_emoji.png&quot;,&quot;스키점프&quot;:&quot;skijump_WO_18\/skijump_WO_18.png&quot;,&quot;fallenkingdom&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;skidefond&quot;:&quot;CrossCountrySkiing_IW_2018\/CrossCountrySkiing_IW_2018.png&quot;,&quot;tommynow&quot;:&quot;tommynow\/tommynow.png&quot;,&quot;speedskating&quot;:&quot;speedskate_WO_18\/speedskate_WO_18.png&quot;,&quot;dualipabrits&quot;:&quot;DuaLipaBRITs\/DuaLipaBRITs.png&quot;,&quot;cofred&quot;:&quot;NHL_2017_2018_Flames\/NHL_2017_2018_Flames.png&quot;,&quot;alteredcarbon&quot;:&quot;AlteredCarbon\/AlteredCarbon.png&quot;,&quot;latovegasonfox&quot;:&quot;Fox_LA_Vegas\/Fox_LA_Vegas.png&quot;,&quot;ittakeseverything&quot;:&quot;NBA_2017_18_LAC\/NBA_2017_18_LAC.png&quot;,&quot;エピソードviii&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;aus&quot;:&quot;aus_WO_2018\/aus_WO_2018.png&quot;,&quot;gilliananderson&quot;:&quot;X-Files\/X-Files.png&quot;,&quot;mammamiaherewegoagain&quot;:&quot;MammaMia2\/MammaMia2.png&quot;,&quot;gliincredibili2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;autoexpo2018&quot;:&quot;Auto_expo\/Auto_expo.png&quot;,&quot;edsheeranbrits&quot;:&quot;EdSheeranBRITs\/EdSheeranBRITs.png&quot;,&quot;latovegas&quot;:&quot;Fox_LA_Vegas\/Fox_LA_Vegas.png&quot;,&quot;vidadeporg&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;amtodm&quot;:&quot;BuzzFeedMorning_v3\/BuzzFeedMorning_v3.png&quot;,&quot;mantis&quot;:&quot;mantis_IW_2018\/mantis_IW_2018.png&quot;,&quot;тор&quot;:&quot;thor_IW_2018\/thor_IW_2018.png&quot;,&quot;ガモーラ&quot;:&quot;gamora_IW_2018_v3\/gamora_IW_2018_v3.png&quot;,&quot;scandalfinale&quot;:&quot;TGIT_Scandal_2017_v3\/TGIT_Scandal_2017_v3.png&quot;,&quot;artlovestory&quot;:&quot;Art_Basel_branded_emoji\/Art_Basel_branded_emoji.png&quot;,&quot;いろはすももから白桃へ&quot;:&quot;CocaColaJapanPeach\/CocaColaJapanPeach.png&quot;,&quot;cantmissmoments&quot;:&quot;cantmissmoments_v2\/cantmissmoments_v2.png&quot;,&quot;керлинг&quot;:&quot;curling_IW_18\/curling_IW_18.png&quot;,&quot;mda&quot;:&quot;mda_wo_2018\/mda_wo_2018.png&quot;,&quot;coupedesbonnesactions&quot;:&quot;Chevrolet_Canada_Good_Deeds_Cup\/Chevrolet_Canada_Good_Deeds_Cup.png&quot;,&quot;torchrelay&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;signoraquale&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;gohabsgo&quot;:&quot;NHL_2017_2018_Canadiens\/NHL_2017_2018_Canadiens.png&quot;,&quot;dundeemovie&quot;:&quot;Tourism_Australia_Dundee_v5\/Tourism_Australia_Dundee_v5.png&quot;,&quot;blackpantherlive&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;flytheflag&quot;:&quot;flytheflag_olympics\/flytheflag_olympics.png&quot;,&quot;ジャイアンツ&quot;:&quot;YomiuriGiants_v2\/YomiuriGiants_v2.png&quot;,&quot;gongxifacai&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;kgz&quot;:&quot;kgz_wo_2018\/kgz_wo_2018.png&quot;,&quot;aetms18&quot;:&quot;Auto_expo\/Auto_expo.png&quot;,&quot;fearthedeer&quot;:&quot;NBA_2017_18_MIL\/NBA_2017_18_MIL.png&quot;,&quot;銅メダル&quot;:&quot;bronze_WO_18\/bronze_WO_18.png&quot;,&quot;am2dmbf&quot;:&quot;BuzzFeedMorning_v3\/BuzzFeedMorning_v3.png&quot;,&quot;алаяведьма&quot;:&quot;Scarlet_Witch\/Scarlet_Witch.png&quot;,&quot;gamora&quot;:&quot;gamora_IW_2018_v3\/gamora_IW_2018_v3.png&quot;,&quot;церемонияоткрытия&quot;:&quot;openingceremony_WO_18_v2\/openingceremony_WO_18_v2.png&quot;,&quot;groot&quot;:&quot;groot_IW_2018_v2\/groot_IW_2018_v2.png&quot;,&quot;côtéobscur&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;samsmithbrits&quot;:&quot;SamSmithBRITs\/SamSmithBRITs.png&quot;,&quot;vibranium&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;howfarwillyougo&quot;:&quot;Amazon_Breathe\/Amazon_Breathe.png&quot;,&quot;olympics&quot;:&quot;olympics_WO_18_v2\/olympics_WO_18_v2.png&quot;,&quot;スピードスケート&quot;:&quot;speedskate_WO_18\/speedskate_WO_18.png&quot;,&quot;白白白白白白白白白白&quot;:&quot;CocaColaJapanPeach\/CocaColaJapanPeach.png&quot;,&quot;fin&quot;:&quot;fin_WO_2018\/fin_WO_2018.png&quot;,&quot;hun&quot;:&quot;hun_wo_2018\/hun_wo_2018.png&quot;,&quot;thefourfox&quot;:&quot;Fox_The_Four\/Fox_The_Four.png&quot;,&quot;sharkteam&quot;:&quot;Sharkteam\/Sharkteam.png&quot;,&quot;nissankicks&quot;:&quot;Nissan_Star_Wars_emoji\/Nissan_Star_Wars_emoji.png&quot;,&quot;mbaku&quot;:&quot;mbaku_v2\/mbaku_v2.png&quot;,&quot;solounounico&quot;:&quot;VW_Troc\/VW_Troc.png&quot;,&quot;알파인스키&quot;:&quot;AlpineSkiing_WO_18\/AlpineSkiing_WO_18.png&quot;,&quot;скелетон&quot;:&quot;skeleton_WO_18\/skeleton_WO_18.png&quot;,&quot;бобслей&quot;:&quot;Bobsleigh_IW_2018\/Bobsleigh_IW_2018.png&quot;,&quot;warmachine&quot;:&quot;warmachine_IW_2018\/warmachine_IW_2018.png&quot;,&quot;jurassic&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;newjumanji&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;smr&quot;:&quot;SMR_wo_2018\/SMR_wo_2018.png&quot;,&quot;jabaritribe&quot;:&quot;mbaku_v2\/mbaku_v2.png&quot;,&quot;cor&quot;:&quot;COR_wo_2018\/COR_wo_2018.png&quot;,&quot;señoraqué&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;taraji&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;knicks&quot;:&quot;NBA_2017_18_NYK\/NBA_2017_18_NYK.png&quot;,&quot;falcão&quot;:&quot;falcon_IW_2018\/falcon_IW_2018.png&quot;,&quot;恭喜发财&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;kohlscash&quot;:&quot;kohlscash2018_v2\/kohlscash2018_v2.png&quot;,&quot;миссистоесть&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;geo&quot;:&quot;geo_wo_2018\/geo_wo_2018.png&quot;,&quot;marchconfidently&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;thisisallofus&quot;:&quot;This_Is_Us_Mid_2018\/This_Is_Us_Mid_2018.png&quot;,&quot;soldadodeinvierno&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;шури&quot;:&quot;shuri_blackpanther\/shuri_blackpanther.png&quot;,&quot;mammamiafilm&quot;:&quot;MammaMia2\/MammaMia2.png&quot;,&quot;superheroconfidence&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;ソー&quot;:&quot;thor_IW_2018\/thor_IW_2018.png&quot;,&quot;riverdalecw&quot;:&quot;RiverdaleS2_2018\/RiverdaleS2_2018.png&quot;,&quot;doitbig&quot;:&quot;NBA_2017_18_NOP\/NBA_2017_18_NOP.png&quot;,&quot;киллмонгер&quot;:&quot;killmonger_blackpanther\/killmonger_blackpanther.png&quot;,&quot;votrevie&quot;:&quot;FitsYourLife\/FitsYourLife.png&quot;,&quot;金メダル&quot;:&quot;Gold_WO_18_v2\/Gold_WO_18_v2.png&quot;,&quot;mgl&quot;:&quot;mgl_wo_2018\/mgl_wo_2018.png&quot;,&quot;golfconfidently&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;ladoluminoso&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;冬季两项&quot;:&quot;Biathlon_IO_18\/Biathlon_IO_18.png&quot;,&quot;luce&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;금메달&quot;:&quot;Gold_WO_18_v2\/Gold_WO_18_v2.png&quot;,&quot;чернаявдова&quot;:&quot;blackwidow_IW_2018\/blackwidow_IW_2018.png&quot;,&quot;itsdigiorno&quot;:&quot;digiornonotdelivery\/digiornonotdelivery.png&quot;,&quot;golive&quot;:&quot;GoLive_Emoji\/GoLive_Emoji.png&quot;,&quot;bol&quot;:&quot;bol_wo_2018_v2\/bol_wo_2018_v2.png&quot;,&quot;westworld&quot;:&quot;Westworld2\/Westworld2.png&quot;,&quot;navakarnataka2025&quot;:&quot;congressq1\/congressq1.png&quot;,&quot;nor&quot;:&quot;nor_wo_2018\/nor_wo_2018.png&quot;,&quot;buzzcity&quot;:&quot;NBA_2017_18_CHA\/NBA_2017_18_CHA.png&quot;,&quot;ngr&quot;:&quot;ngr_wo_2018\/ngr_wo_2018.png&quot;,&quot;apnibhashameinfeelhai&quot;:&quot;zeefive\/zeefive.png&quot;,&quot;아이스하키&quot;:&quot;hockey_WO_18_v2\/hockey_WO_18_v2.png&quot;,&quot;ladodaluz&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;ракета&quot;:&quot;rocket_IW_2018_v2\/rocket_IW_2018_v2.png&quot;,&quot;timestone&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;바이애슬론&quot;:&quot;Biathlon_IO_18\/Biathlon_IO_18.png&quot;,&quot;短道速滑&quot;:&quot;shorttrackski_WO_18\/shorttrackski_WO_18.png&quot;,&quot;visao&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;iamgroot&quot;:&quot;groot_IW_2018_v2\/groot_IW_2018_v2.png&quot;,&quot;rockets&quot;:&quot;NBA_2017_18_HOU\/NBA_2017_18_HOU.png&quot;,&quot;dancingonice&quot;:&quot;DancingOnIce2018\/DancingOnIce2018.png&quot;,&quot;naciónporg&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;baftas&quot;:&quot;BAFTA\/BAFTA.png&quot;,&quot;chn&quot;:&quot;chn_WO_2018\/chn_WO_2018.png&quot;,&quot;soldatodinverno&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;lavisión&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;gaytm&quot;:&quot;ANZ_MardiGras_2018\/ANZ_MardiGras_2018.png&quot;,&quot;ceremoniedecloture&quot;:&quot;closingceremony_WO_18\/closingceremony_WO_18.png&quot;,&quot;mlt&quot;:&quot;MLT_wo_2018\/MLT_wo_2018.png&quot;,&quot;jurassicpark&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;greysanatomyfinale&quot;:&quot;TGIT_Meredith_2017_v5\/TGIT_Meredith_2017_v5.png&quot;,&quot;gha&quot;:&quot;gha_wo_2018\/gha_wo_2018.png&quot;,&quot;revezamentodatocha&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;tha&quot;:&quot;THA_wo_2018\/THA_wo_2018.png&quot;,&quot;mex&quot;:&quot;mex_wo_2018\/mex_wo_2018.png&quot;,&quot;rsa&quot;:&quot;rsa_wo_2018\/rsa_wo_2018.png&quot;,&quot;esseemeunatal&quot;:&quot;Natura_X-tmas_emoji_V3\/Natura_X-tmas_emoji_V3.png&quot;,&quot;祝アニナナ&quot;:&quot;idolish7_emoji\/idolish7_emoji.png&quot;,&quot;kor&quot;:&quot;kor_wo_2018\/kor_wo_2018.png&quot;,&quot;quickenloans&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;colonelsanders&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;visión&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;국가대표칭찬해&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;thedisasterartist&quot;:&quot;The_Disaster_Artist_v2\/The_Disaster_Artist_v2.png&quot;,&quot;ber&quot;:&quot;ber_WO_2018\/ber_WO_2018.png&quot;,&quot;эстафетаолимпийскогоогня&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;thevision&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;crosscountryskiing&quot;:&quot;CrossCountrySkiing_IW_2018\/CrossCountrySkiing_IW_2018.png&quot;,&quot;notdelivery&quot;:&quot;digiornonotdelivery\/digiornonotdelivery.png&quot;,&quot;100txrocketmortgage&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;アイスホッケー&quot;:&quot;hockey_WO_18_v2\/hockey_WO_18_v2.png&quot;,&quot;가자평창&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;ritaorabrits&quot;:&quot;RitaOraBRITs\/RitaOraBRITs.png&quot;,&quot;gladiatorsout&quot;:&quot;TGIT_Scandal_2017_v3\/TGIT_Scandal_2017_v3.png&quot;,&quot;greysanatomy&quot;:&quot;TGIT_Meredith_2017_v5\/TGIT_Meredith_2017_v5.png&quot;,&quot;wethenorth&quot;:&quot;NBA_2017_18_TOR\/NBA_2017_18_TOR.png&quot;,&quot;darkside&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;senhoraqual&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;アルペンスキー&quot;:&quot;AlpineSkiing_WO_18\/AlpineSkiing_WO_18.png&quot;,&quot;ihaveadream&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;الخيار_الذكي&quot;:&quot;ZainKSA\/ZainKSA.png&quot;,&quot;htgawmabc&quot;:&quot;TGIT_HTGAWM_2017_v3\/TGIT_HTGAWM_2017_v3.png&quot;,&quot;sejaguerreiro&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;rockygi&quot;:&quot;rocket_IW_2018_v2\/rocket_IW_2018_v2.png&quot;,&quot;スターウォーズep8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;mammamiamovie&quot;:&quot;MammaMia2\/MammaMia2.png&quot;,&quot;codwwii&quot;:&quot;CODWWII_emoji\/CODWWII_emoji.png&quot;,&quot;monsterhunterworld&quot;:&quot;MHW_2018\/MHW_2018.png&quot;,&quot;gospursgo&quot;:&quot;NBA_2017_18_SAS\/NBA_2017_18_SAS.png&quot;,&quot;downtowndubai&quot;:&quot;Emaar_Emoji_v4\/Emaar_Emoji_v4.png&quot;,&quot;pur&quot;:&quot;pur_wo_2018\/pur_wo_2018.png&quot;,&quot;порги&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;闭幕式&quot;:&quot;closingceremony_WO_18\/closingceremony_WO_18.png&quot;,&quot;dubnation&quot;:&quot;NBA_2017_18_GSW\/NBA_2017_18_GSW.png&quot;,&quot;3x3u&quot;:&quot;dosequis\/dosequis.png&quot;,&quot;쇼트트랙스케이팅&quot;:&quot;shorttrackski_WO_18\/shorttrackski_WO_18.png&quot;,&quot;マンティス&quot;:&quot;mantis_IW_2018\/mantis_IW_2018.png&quot;,&quot;небула&quot;:&quot;nebula_IW_2018\/nebula_IW_2018.png&quot;,&quot;starwars&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;panteranegra&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;takenote&quot;:&quot;NBA_2017_18_UTA\/NBA_2017_18_UTA.png&quot;,&quot;goknowtakecontrol&quot;:&quot;Cigna_Emoji\/Cigna_Emoji.png&quot;,&quot;ragnbonemanbrits&quot;:&quot;RagNBoneManBRITs\/RagNBoneManBRITs.png&quot;,&quot;thefour&quot;:&quot;Fox_The_Four\/Fox_The_Four.png&quot;,&quot;skiacrobatique&quot;:&quot;FreestyleSkiing_IW_18\/FreestyleSkiing_IW_18.png&quot;,&quot;ifeelprettymovie&quot;:&quot;feelpretty_v2\/feelpretty_v2.png&quot;,&quot;snowboard&quot;:&quot;snowboard_WO_18\/snowboard_WO_18.png&quot;,&quot;unviajeeneltiempo&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;episodio8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;madamequi&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;tommywiseau&quot;:&quot;The_Disaster_Artist_v2\/The_Disaster_Artist_v2.png&quot;,&quot;金牌&quot;:&quot;Gold_WO_18_v2\/Gold_WO_18_v2.png&quot;,&quot;silver&quot;:&quot;silver_WO_18_v2\/silver_WO_18_v2.png&quot;,&quot;올림픽성화봉송&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;زين_هنا&quot;:&quot;ZainKSA\/ZainKSA.png&quot;,&quot;gowinx&quot;:&quot;Tab_Winx_Emoji_v3\/Tab_Winx_Emoji_v3.png&quot;,&quot;greysfinale&quot;:&quot;TGIT_Meredith_2017_v5\/TGIT_Meredith_2017_v5.png&quot;,&quot;blackpanther&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;riverdale&quot;:&quot;RiverdaleS2_2018\/RiverdaleS2_2018.png&quot;,&quot;freestyleskiing&quot;:&quot;FreestyleSkiing_IW_18\/FreestyleSkiing_IW_18.png&quot;,&quot;isl&quot;:&quot;isl_wo_2018\/isl_wo_2018.png&quot;,&quot;iri&quot;:&quot;iri_wo_2018\/iri_wo_2018.png&quot;,&quot;sraqué&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;ラブクロ&quot;:&quot;LoveKuro\/LoveKuro.png&quot;,&quot;teamkorea&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;owl2018&quot;:&quot;Overwatch_League_Launch\/Overwatch_League_Launch.png&quot;,&quot;ifeelpretty&quot;:&quot;feelpretty_v2\/feelpretty_v2.png&quot;,&quot;スター・ウォーズ最後のジェダイ&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;개막식&quot;:&quot;openingceremony_WO_18_v2\/openingceremony_WO_18_v2.png&quot;,&quot;mlk18&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;pacers&quot;:&quot;NBA_2017_18_IND\/NBA_2017_18_IND.png&quot;,&quot;ブラックパンサー&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;mardigras40&quot;:&quot;sydneymardigras2018\/sydneymardigras2018.png&quot;,&quot;theresidentonfox&quot;:&quot;Resident_FOX_emoji_v2\/Resident_FOX_emoji_v2.png&quot;,&quot;autoexpo18&quot;:&quot;Auto_expo\/Auto_expo.png&quot;,&quot;mindstone&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;봅슬레이&quot;:&quot;Bobsleigh_IW_2018\/Bobsleigh_IW_2018.png&quot;,&quot;sui&quot;:&quot;SUI_wo_2018\/SUI_wo_2018.png&quot;,&quot;thestrangers&quot;:&quot;thestrangers\/thestrangers.png&quot;,&quot;figureskating&quot;:&quot;figureskating_IW_18\/figureskating_IW_18.png&quot;,&quot;花样滑冰&quot;:&quot;figureskating_IW_18\/figureskating_IW_18.png&quot;,&quot;blackmonuments&quot;:&quot;micblackmonuments2018\/micblackmonuments2018.png&quot;,&quot;컬링&quot;:&quot;curling_IW_18\/curling_IW_18.png&quot;,&quot;capitánamérica&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;umadobranotempo&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;北欧两项&quot;:&quot;nordic_WO_18\/nordic_WO_18.png&quot;,&quot;unraccourcidansletemps&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;钢架雪车&quot;:&quot;skeleton_WO_18\/skeleton_WO_18.png&quot;,&quot;svk&quot;:&quot;svk_wo_2018\/svk_wo_2018.png&quot;,&quot;aecompshow18&quot;:&quot;Auto_expo\/Auto_expo.png&quot;,&quot;911onfox&quot;:&quot;911_Fox\/911_Fox.png&quot;,&quot;gre&quot;:&quot;GRE_wo_2018\/GRE_wo_2018.png&quot;,&quot;mytwitteranniversary&quot;:&quot;MyTwitterAnniversary\/MyTwitterAnniversary.png&quot;,&quot;teamcap&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;daszeiträtsel&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;alpineskiing&quot;:&quot;AlpineSkiing_WO_18\/AlpineSkiing_WO_18.png&quot;,&quot;リュージュ&quot;:&quot;luge_WO_18\/luge_WO_18.png&quot;,&quot;дроиды&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;thebachelorfinale&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;loki&quot;:&quot;Loki_IW_2018\/Loki_IW_2018.png&quot;,&quot;losúltimosjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;superboost&quot;:&quot;SuperBoost_emoji\/SuperBoost_emoji.png&quot;,&quot;nbbnotwitter&quot;:&quot;Emoji_NBB_2017_2018\/Emoji_NBB_2017_2018.png&quot;,&quot;平和オリンピック&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;doctorstephenstrange&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;跳台滑雪&quot;:&quot;skijump_WO_18\/skijump_WO_18.png&quot;,&quot;cheddarlive&quot;:&quot;Cheddar_Emoji_v4\/Cheddar_Emoji_v4.png&quot;,&quot;overwatchleague&quot;:&quot;Overwatch_League_Launch\/Overwatch_League_Launch.png&quot;,&quot;skeleton&quot;:&quot;skeleton_WO_18\/skeleton_WO_18.png&quot;,&quot;cgds4&quot;:&quot;CelebsGoDating2018\/CelebsGoDating2018.png&quot;,&quot;htgawmfinale&quot;:&quot;TGIT_HTGAWM_2017_v3\/TGIT_HTGAWM_2017_v3.png&quot;,&quot;doutorestranho&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;лыжноедвоеборье&quot;:&quot;nordic_WO_18\/nordic_WO_18.png&quot;,&quot;falcao&quot;:&quot;falcon_IW_2018\/falcon_IW_2018.png&quot;,&quot;spiderman&quot;:&quot;spiderman_IW_2018\/spiderman_IW_2018.png&quot;,&quot;mnwild&quot;:&quot;NHL_2017_2018_MNwild\/NHL_2017_2018_MNwild.png&quot;,&quot;primoordine&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;폐막식&quot;:&quot;closingceremony_WO_18\/closingceremony_WO_18.png&quot;,&quot;ヴィジョン&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;порг&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;skijumping&quot;:&quot;skijump_WO_18\/skijump_WO_18.png&quot;,&quot;ボブスレー&quot;:&quot;Bobsleigh_IW_2018\/Bobsleigh_IW_2018.png&quot;,&quot;honkytonkcolonel&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;olympictorchrelay&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;aut&quot;:&quot;aut_WO_2018\/aut_WO_2018.png&quot;,&quot;teampaolasascha&quot;:&quot;Amazon_Niche_Grand_Paola_v3\/Amazon_Niche_Grand_Paola_v3.png&quot;,&quot;soisuneguerriere&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;viúvanegra&quot;:&quot;blackwidow_IW_2018\/blackwidow_IW_2018.png&quot;,&quot;мбаку&quot;:&quot;mbaku_v2\/mbaku_v2.png&quot;,&quot;mtndewice&quot;:&quot;Mountain_Dew_2018_SuperBowl\/Mountain_Dew_2018_SuperBowl.png&quot;,&quot;teamunited&quot;:&quot;United_Winter_Olympics_2018V2\/United_Winter_Olympics_2018V2.png&quot;,&quot;letsgoducks&quot;:&quot;NHL_2017_2018_Ducks\/NHL_2017_2018_Ducks.png&quot;,&quot;starwarsep8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;ウィンターソルジャー&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;スターウォーズ&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;cyp&quot;:&quot;cyp_WO_2018\/cyp_WO_2018.png&quot;,&quot;vibramagenta&quot;:&quot;JBALVIN\/JBALVIN.png&quot;,&quot;laprimeraorden&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;피겨스케이팅&quot;:&quot;figureskating_IW_18\/figureskating_IW_18.png&quot;,&quot;digiornonotdelivery&quot;:&quot;digiornonotdelivery\/digiornonotdelivery.png&quot;,&quot;thelastjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;nyr&quot;:&quot;NHL_2017_2018_Buff_NYRangers\/NHL_2017_2018_Buff_NYRangers.png&quot;,&quot;jumanjigame&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;bucky&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;derniersjed&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;2018平昌&quot;:&quot;PyeongChang_WO_18\/PyeongChang_WO_18.png&quot;,&quot;hulk&quot;:&quot;hulk_IW_2018_v2\/hulk_IW_2018_v2.png&quot;,&quot;스피드스케이팅&quot;:&quot;speedskate_WO_18\/speedskate_WO_18.png&quot;,&quot;bih&quot;:&quot;bih_WO_2018\/bih_WO_2018.png&quot;,&quot;webslinger&quot;:&quot;spiderman_IW_2018\/spiderman_IW_2018.png&quot;,&quot;ultimojedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;гамора&quot;:&quot;gamora_IW_2018_v3\/gamora_IW_2018_v3.png&quot;,&quot;samanthabee&quot;:&quot;Full_Frontal_Emoji\/Full_Frontal_Emoji.png&quot;,&quot;ceremoniedouverture&quot;:&quot;openingceremony_WO_18_v2\/openingceremony_WO_18_v2.png&quot;,&quot;キルモンガー&quot;:&quot;killmonger_blackpanther\/killmonger_blackpanther.png&quot;,&quot;mas&quot;:&quot;mas_wo_2018\/mas_wo_2018.png&quot;,&quot;銀メダル&quot;:&quot;silver_WO_18_v2\/silver_WO_18_v2.png&quot;,&quot;visão&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;冰壶&quot;:&quot;curling_IW_18\/curling_IW_18.png&quot;,&quot;сокол&quot;:&quot;falcon_IW_2018\/falcon_IW_2018.png&quot;,&quot;peterparker&quot;:&quot;spiderman_IW_2018\/spiderman_IW_2018.png&quot;,&quot;gooddeedscup&quot;:&quot;Chevrolet_Canada_Good_Deeds_Cup\/Chevrolet_Canada_Good_Deeds_Cup.png&quot;,&quot;greysabc&quot;:&quot;TGIT_Meredith_2017_v5\/TGIT_Meredith_2017_v5.png&quot;,&quot;patinagedevitessesurpistecourte&quot;:&quot;shorttrackski_WO_18\/shorttrackski_WO_18.png&quot;,&quot;super6&quot;:&quot;Super6_emoji\/Super6_emoji.png&quot;,&quot;allforone&quot;:&quot;NBA_2017_18_CLE\/NBA_2017_18_CLE.png&quot;,&quot;flyeaglesfly&quot;:&quot;Eaglesv4\/Eaglesv4.png&quot;,&quot;スパイダーマン&quot;:&quot;spiderman_IW_2018\/spiderman_IW_2018.png&quot;,&quot;togetherforgreen&quot;:&quot;Coca-Cola_World_Cup\/Coca-Cola_World_Cup.png&quot;,&quot;playjumanji&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;ladooscuro&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;teamcigna&quot;:&quot;Cigna_Emoji\/Cigna_Emoji.png&quot;,&quot;ダークサイド&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;colonelreba&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;kfcbbq&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;proudmary&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;mhworld&quot;:&quot;MHW_2018\/MHW_2018.png&quot;,&quot;bbhate&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;tchalla&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;ドロイド&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;blackmonumentsproject&quot;:&quot;micblackmonuments2018\/micblackmonuments2018.png&quot;,&quot;starwarsepviii&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;alltogethernowstl&quot;:&quot;NHL_2017_2018_STL_Blues\/NHL_2017_2018_STL_Blues.png&quot;,&quot;sanremo2018&quot;:&quot;TIM_Sanremo_2018-v3\/TIM_Sanremo_2018-v3.png&quot;,&quot;thebachelor&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;foofightersbrits&quot;:&quot;FooFightersBRITs\/FooFightersBRITs.png&quot;,&quot;relevodelaantorchaolímpica&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;njdevils&quot;:&quot;NHL_2017_2018_NJDevils\/NHL_2017_2018_NJDevils.png&quot;,&quot;franciscoenperu&quot;:&quot;Pope_Chile_Peru\/Pope_Chile_Peru.png&quot;,&quot;alienisttnt&quot;:&quot;TNT-Alienist\/TNT-Alienist.png&quot;,&quot;westworldhbo&quot;:&quot;Westworld2\/Westworld2.png&quot;,&quot;afterthefinalrose&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;nbcutorchrelay&quot;:&quot;NBCU_Torch_Relay\/NBCU_Torch_Relay.png&quot;,&quot;medalmania&quot;:&quot;Oreo_Olympics\/Oreo_Olympics.png&quot;,&quot;preparefordisaster&quot;:&quot;The_Disaster_Artist_v2\/The_Disaster_Artist_v2.png&quot;,&quot;netneutrality&quot;:&quot;Net_Emoji_v3\/Net_Emoji_v3.png&quot;,&quot;wckd&quot;:&quot;MazeRunner2\/MazeRunner2.png&quot;,&quot;우리선수&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;thealienisttnt&quot;:&quot;TNT-Alienist\/TNT-Alienist.png&quot;,&quot;jorjasmithbrits&quot;:&quot;JorjaSmithBRITs\/JorjaSmithBRITs.png&quot;,&quot;stephenstrange&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;arm&quot;:&quot;arm_WO_2018\/arm_WO_2018.png&quot;,&quot;amtodmbf&quot;:&quot;BuzzFeedMorning_v3\/BuzzFeedMorning_v3.png&quot;,&quot;helleseite&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;tls&quot;:&quot;TLS_wo_2018\/TLS_wo_2018.png&quot;,&quot;新年快樂&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;winjoethemug&quot;:&quot;GiveJoeABreak\/GiveJoeABreak.png&quot;,&quot;popbuzzpresents&quot;:&quot;PopbuzzPresents_Emoji\/PopbuzzPresents_Emoji.png&quot;,&quot;cignaruntogether&quot;:&quot;Cigna_Emoji\/Cigna_Emoji.png&quot;,&quot;オリンピック聖火&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;スケルトン&quot;:&quot;skeleton_WO_18\/skeleton_WO_18.png&quot;,&quot;изломвремени&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;zee5&quot;:&quot;zeefive\/zeefive.png&quot;,&quot;proudmarymovie&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;золото&quot;:&quot;Gold_WO_18_v2\/Gold_WO_18_v2.png&quot;,&quot;chamaolimpica&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;чёрнаяпантера&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;osincríveis2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;letztenjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;sacramentoproud&quot;:&quot;NBA_2017_18_SAC\/NBA_2017_18_SAC.png&quot;,&quot;キャプテンアメリカ&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;thunderup&quot;:&quot;NBA_2017_18_OKC\/NBA_2017_18_OKC.png&quot;,&quot;signoracose&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;nbatwitter&quot;:&quot;NBATwitter_Emoji___v4\/NBATwitter_Emoji___v4.png&quot;,&quot;drax&quot;:&quot;drax_IW_2018\/drax_IW_2018.png&quot;,&quot;getoutmovie&quot;:&quot;GetOutMovie\/GetOutMovie.png&quot;,&quot;スター・ウォーズ&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;f4glory&quot;:&quot;Euroleague_2018_v2\/Euroleague_2018_v2.png&quot;,&quot;celebsgodating&quot;:&quot;CelebsGoDating2018\/CelebsGoDating2018.png&quot;,&quot;celebsgodatingseries4&quot;:&quot;CelebsGoDating2018\/CelebsGoDating2018.png&quot;,&quot;dcfamily&quot;:&quot;NBA_2017_18_WAS\/NBA_2017_18_WAS.png&quot;,&quot;gotg&quot;:&quot;starlord_IW_2018_v2\/starlord_IW_2018_v2.png&quot;,&quot;justintimberlakebrits&quot;:&quot;JustinTimberlakeBRITs\/JustinTimberlakeBRITs.png&quot;,&quot;будьвоином&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;stormzybrits&quot;:&quot;StormzyBRITs\/StormzyBRITs.png&quot;,&quot;starwarsepisode8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;lastjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;ارامكو&quot;:&quot;Aramco_emoji\/Aramco_emoji.png&quot;,&quot;combinenordique&quot;:&quot;nordic_WO_18\/nordic_WO_18.png&quot;,&quot;theresident&quot;:&quot;Resident_FOX_emoji_v2\/Resident_FOX_emoji_v2.png&quot;,&quot;冰球&quot;:&quot;hockey_WO_18_v2\/hockey_WO_18_v2.png&quot;,&quot;hockeysurglace&quot;:&quot;hockey_WO_18_v2\/hockey_WO_18_v2.png&quot;,&quot;captainamerica&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;дроид&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;unexpectmore&quot;:&quot;unexpectmore\/unexpectmore.png&quot;,&quot;happylunarnewyear&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;altcarb&quot;:&quot;AlteredCarbon\/AlteredCarbon.png&quot;,&quot;xfiles&quot;:&quot;X-Files\/X-Files.png&quot;,&quot;dieletztenjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;celtics&quot;:&quot;NBA_2017_18_BOS\/NBA_2017_18_BOS.png&quot;,&quot;새해복많이받으세요&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;icehockey&quot;:&quot;hockey_WO_18_v2\/hockey_WO_18_v2.png&quot;,&quot;imlek&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;liampaynebrits&quot;:&quot;LiamPayneBRITs\/LiamPayneBRITs.png&quot;,&quot;fitsyourlife&quot;:&quot;FitsYourLife\/FitsYourLife.png&quot;,&quot;olympicflame&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;アイアンマン&quot;:&quot;ironman_IW_2018_v3\/ironman_IW_2018_v3.png&quot;,&quot;いろはす白桃&quot;:&quot;CocaColaJapanPeach\/CocaColaJapanPeach.png&quot;,&quot;heygoogle&quot;:&quot;Google_Assistant\/Google_Assistant.png&quot;,&quot;aramco&quot;:&quot;Aramco_emoji\/Aramco_emoji.png&quot;,&quot;newsroomapp&quot;:&quot;NewsroomApp\/NewsroomApp.png&quot;,&quot;フィギュアスケート&quot;:&quot;figureskating_IW_18\/figureskating_IW_18.png&quot;,&quot;ブラックウィドウ&quot;:&quot;blackwidow_IW_2018\/blackwidow_IW_2018.png&quot;,&quot;esseehmeunatal&quot;:&quot;Natura_X-tmas_emoji_V3\/Natura_X-tmas_emoji_V3.png&quot;,&quot;sraquién&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;kaz&quot;:&quot;kaz_wo_2018\/kaz_wo_2018.png&quot;,&quot;ビービーナインイー&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;homemdeferro&quot;:&quot;ironman_IW_2018_v3\/ironman_IW_2018_v3.png&quot;,&quot;шорттрек&quot;:&quot;shorttrackski_WO_18\/shorttrackski_WO_18.png&quot;,&quot;firstorder&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;buckybarnes&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;kentuckyfriedchicken&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;monsterhunter&quot;:&quot;MHW_2018\/MHW_2018.png&quot;,&quot;alb&quot;:&quot;alb_WO_2018\/alb_WO_2018.png&quot;,&quot;lobsterfest&quot;:&quot;Red_Lobster_Next_Gen\/Red_Lobster_Next_Gen.png&quot;,&quot;雪橇&quot;:&quot;luge_WO_18\/luge_WO_18.png&quot;,&quot;和平奥运会&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;thedebut&quot;:&quot;TheDebut\/TheDebut.png&quot;,&quot;xfilesbinge&quot;:&quot;X-Files\/X-Files.png&quot;,&quot;グルート&quot;:&quot;groot_IW_2018_v2\/groot_IW_2018_v2.png&quot;,&quot;inc4karnataka&quot;:&quot;congressq1\/congressq1.png&quot;,&quot;mrswho&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;soldadoinvernal&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;medailledebronze&quot;:&quot;bronze_WO_18\/bronze_WO_18.png&quot;,&quot;mffl&quot;:&quot;NBA_2017_18_DAL\/NBA_2017_18_DAL.png&quot;,&quot;goboldly&quot;:&quot;PhRMA\/PhRMA.png&quot;,&quot;rou&quot;:&quot;ROU_wo_2018\/ROU_wo_2018.png&quot;,&quot;freshevents&quot;:&quot;Fresh_Empire_Q1_2018_v2\/Fresh_Empire_Q1_2018_v2.png&quot;,&quot;isles&quot;:&quot;NHL_2017_2018_NYIslanders\/NHL_2017_2018_NYIslanders.png&quot;,&quot;primeraorden&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;jeuxolympiques&quot;:&quot;olympics_WO_18_v2\/olympics_WO_18_v2.png&quot;,&quot;kfc&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;doritosblaze&quot;:&quot;Doritos_superbowl_2018\/Doritos_superbowl_2018.png&quot;,&quot;passioneering&quot;:&quot;MahindraRacing_v2\/MahindraRacing_v2.png&quot;,&quot;lightup2018&quot;:&quot;Emaar_Emoji_v4\/Emaar_Emoji_v4.png&quot;,&quot;ultimijedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;thephantomoftheopera&quot;:&quot;PhantomofTheOpera_2018\/PhantomofTheOpera_2018.png&quot;,&quot;sgp&quot;:&quot;sgp_wo_2018\/sgp_wo_2018.png&quot;,&quot;bbneuf&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;starwarsgliultimijedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;lesindestructibles2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;mrswhich&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;am2dm&quot;:&quot;BuzzFeedMorning_v3\/BuzzFeedMorning_v3.png&quot;,&quot;jpn&quot;:&quot;jpn_wo_2018\/jpn_wo_2018.png&quot;,&quot;brucebanner&quot;:&quot;hulk_IW_2018_v2\/hulk_IW_2018_v2.png&quot;,&quot;blr&quot;:&quot;blr_WO_2018\/blr_WO_2018.png&quot;,&quot;porgnation&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;disasterartist&quot;:&quot;The_Disaster_Artist_v2\/The_Disaster_Artist_v2.png&quot;,&quot;kingday50&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;starwarsthelastjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;justintimberlake&quot;:&quot;JustinTimberlake_MOTW\/JustinTimberlake_MOTW.png&quot;,&quot;ultimosjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;can&quot;:&quot;can_WO_2018\/can_WO_2018.png&quot;,&quot;viudanegra&quot;:&quot;blackwidow_IW_2018\/blackwidow_IW_2018.png&quot;,&quot;scanda7&quot;:&quot;TGIT_Scandal_2017_v3\/TGIT_Scandal_2017_v3.png&quot;,&quot;ubsart&quot;:&quot;Art_Basel_branded_emoji\/Art_Basel_branded_emoji.png&quot;,&quot;mar&quot;:&quot;mar_wo_2018\/mar_wo_2018.png&quot;,&quot;lunarnewyear&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;aetms&quot;:&quot;Auto_expo\/Auto_expo.png&quot;,&quot;sydneymardigras&quot;:&quot;sydneymardigras2018\/sydneymardigras2018.png&quot;,&quot;설날&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;لأجلهم_نبني&quot;:&quot;ministryofhousingKSA-10\/ministryofhousingKSA-10.png&quot;,&quot;closelangtocloserpa&quot;:&quot;CloseupValentinesDay\/CloseupValentinesDay.png&quot;,&quot;الإسكان_التنموي&quot;:&quot;ministryofhousingKSA-11\/ministryofhousingKSA-11.png&quot;,&quot;vision&quot;:&quot;vision_IW_2018_v2\/vision_IW_2018_v2.png&quot;,&quot;grindcity&quot;:&quot;NBA_2017_18_MEM\/NBA_2017_18_MEM.png&quot;,&quot;nowyoureinthesunkenplace&quot;:&quot;GetOutMovie\/GetOutMovie.png&quot;,&quot;senhoraquem&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;gladiatorsabc&quot;:&quot;TGIT_Scandal_2017_v3\/TGIT_Scandal_2017_v3.png&quot;,&quot;スノーボード&quot;:&quot;snowboard_WO_18\/snowboard_WO_18.png&quot;,&quot;ファルコン&quot;:&quot;falcon_IW_2018\/falcon_IW_2018.png&quot;,&quot;iamproud&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;blackheroes&quot;:&quot;micblackmonuments2018\/micblackmonuments2018.png&quot;,&quot;blackwidow&quot;:&quot;blackwidow_IW_2018\/blackwidow_IW_2018.png&quot;,&quot;drstephenstrange&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;o2priority&quot;:&quot;followtherabbit_o2\/followtherabbit_o2.png&quot;,&quot;lgrw&quot;:&quot;NHL_2017_2018_DetroitRW\/NHL_2017_2018_DetroitRW.png&quot;,&quot;pyeongchang2018&quot;:&quot;PyeongChang_WO_18\/PyeongChang_WO_18.png&quot;,&quot;toyotahotpass&quot;:&quot;toyotaracing\/toyotaracing.png&quot;,&quot;martinlutherkingjr&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;bobsleigh&quot;:&quot;Bobsleigh_IW_2018\/Bobsleigh_IW_2018.png&quot;,&quot;jurassicpark25&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;オリンピック&quot;:&quot;olympics_WO_18_v2\/olympics_WO_18_v2.png&quot;,&quot;олимпийскийогонь&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;ita&quot;:&quot;ita_wo_2018\/ita_wo_2018.png&quot;,&quot;bronze&quot;:&quot;bronze_WO_18\/bronze_WO_18.png&quot;,&quot;狗年旺旺&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;mlkday&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;mamamia2&quot;:&quot;MammaMia2\/MammaMia2.png&quot;,&quot;dunkleseite&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;col&quot;:&quot;col_wo_2018\/col_wo_2018.png&quot;,&quot;homemaranha&quot;:&quot;spiderman_IW_2018\/spiderman_IW_2018.png&quot;,&quot;铜牌&quot;:&quot;bronze_WO_18\/bronze_WO_18.png&quot;,&quot;シュリ&quot;:&quot;shuri_blackpanther\/shuri_blackpanther.png&quot;,&quot;goduster&quot;:&quot;Dacia_Duster_v3\/Dacia_Duster_v3.png&quot;,&quot;最後のジェダイ&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;速度滑冰&quot;:&quot;speedskate_WO_18\/speedskate_WO_18.png&quot;,&quot;teamcanada&quot;:&quot;can_WO_2018\/can_WO_2018.png&quot;,&quot;越野滑雪&quot;:&quot;CrossCountrySkiing_IW_2018\/CrossCountrySkiing_IW_2018.png&quot;,&quot;lobsterfestgoals&quot;:&quot;Red_Lobster_Next_Gen\/Red_Lobster_Next_Gen.png&quot;,&quot;equipecanada&quot;:&quot;can_WO_2018\/can_WO_2018.png&quot;,&quot;medailledor&quot;:&quot;Gold_WO_18_v2\/Gold_WO_18_v2.png&quot;,&quot;doramilaje&quot;:&quot;okoye_blackpanther\/okoye_blackpanther.png&quot;,&quot;thefouronfox&quot;:&quot;Fox_The_Four\/Fox_The_Four.png&quot;,&quot;usa&quot;:&quot;USA_wo_2018\/USA_wo_2018.png&quot;,&quot;звездныйлорд&quot;:&quot;starlord_IW_2018_v2\/starlord_IW_2018_v2.png&quot;,&quot;scarletwitch&quot;:&quot;Scarlet_Witch\/Scarlet_Witch.png&quot;,&quot;ドラックス&quot;:&quot;drax_IW_2018\/drax_IW_2018.png&quot;,&quot;truetoatlanta&quot;:&quot;NBA_2017_18_ATL\/NBA_2017_18_ATL.png&quot;,&quot;миссисчтотут&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;relevodelaantorchaolimpica&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;iktva&quot;:&quot;Aramco_emoji\/Aramco_emoji.png&quot;,&quot;エピソード8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;martinlutherking&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;мэгмёрри&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;baftas2018&quot;:&quot;BAFTA\/BAFTA.png&quot;,&quot;proudmother&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;церемониязакрытия&quot;:&quot;closingceremony_WO_18\/closingceremony_WO_18.png&quot;,&quot;eri&quot;:&quot;eri_wo_2018\/eri_wo_2018.png&quot;,&quot;blackhawks&quot;:&quot;NHL_2017_2018_Blackhawks\/NHL_2017_2018_Blackhawks.png&quot;,&quot;rocketelmapache&quot;:&quot;rocket_IW_2018_v2\/rocket_IW_2018_v2.png&quot;,&quot;私にとって平和とは&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;flammeolympique&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;pazparami&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;sjsharks&quot;:&quot;NHL_2017_2018_SJSharks\/NHL_2017_2018_SJSharks.png&quot;,&quot;scandalabc&quot;:&quot;TGIT_Scandal_2017_v3\/TGIT_Scandal_2017_v3.png&quot;,&quot;gringo&quot;:&quot;gringomovie\/gringomovie.png&quot;,&quot;ultimajedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;majorconfidence&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;lightside&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;恭喜發財&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;theincredibles&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;bestofus&quot;:&quot;BestOfUs\/BestOfUs.png&quot;,&quot;martinlutherkingjrday&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;jumanjijungle&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;bul&quot;:&quot;bul_WO_2018\/bul_WO_2018.png&quot;,&quot;sunsat50&quot;:&quot;NBA_2017_18_PHX\/NBA_2017_18_PHX.png&quot;,&quot;jughead&quot;:&quot;RiverdaleS2_2018\/RiverdaleS2_2018.png&quot;,&quot;tissuetuesdays&quot;:&quot;This_Is_Us_Mid_2018\/This_Is_Us_Mid_2018.png&quot;,&quot;زين_السعودية&quot;:&quot;ZainKSA\/ZainKSA.png&quot;,&quot;nebulaiw&quot;:&quot;nebula_IW_2018\/nebula_IW_2018.png&quot;,&quot;luge&quot;:&quot;luge_WO_18\/luge_WO_18.png&quot;,&quot;jurassicworld&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;arieluyendykjr&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;itsnotdeliveryitsdigiorno&quot;:&quot;digiornonotdelivery\/digiornonotdelivery.png&quot;,&quot;gostars&quot;:&quot;NHL_2017_2018_DStars\/NHL_2017_2018_DStars.png&quot;,&quot;madamequidam&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;nyevegasstyle&quot;:&quot;MGM_NYE_2017\/MGM_NYE_2017.png&quot;,&quot;wintersoldier&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;lobsterworthy&quot;:&quot;Red_Lobster_Next_Gen\/Red_Lobster_Next_Gen.png&quot;,&quot;pepsihalftime&quot;:&quot;Pepsi_Halftime_SuperBowl_2018_v2\/Pepsi_Halftime_SuperBowl_2018_v2.png&quot;,&quot;mlk2018&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;mhw&quot;:&quot;MHW_2018\/MHW_2018.png&quot;,&quot;appleeduchat&quot;:&quot;AppleEDUChat_v2\/AppleEDUChat_v2.png&quot;,&quot;vwtroc&quot;:&quot;VW_Troc\/VW_Troc.png&quot;,&quot;redvolution&quot;:&quot;NHL_2017_2018_CarolinaCanes\/NHL_2017_2018_CarolinaCanes.png&quot;,&quot;breathetrailer&quot;:&quot;Amazon_Breathe\/Amazon_Breathe.png&quot;,&quot;madamequiproquo&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;flapanthers&quot;:&quot;NHL_2017_2018_FlaPanthers\/NHL_2017_2018_FlaPanthers.png&quot;,&quot;womentellall&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;jamesmay&quot;:&quot;The_Grand_Tour_May_Emoji\/The_Grand_Tour_May_Emoji.png&quot;,&quot;theincrediblehulk&quot;:&quot;hulk_IW_2018_v2\/hulk_IW_2018_v2.png&quot;,&quot;ladodelaluz&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;osultimosjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;ken&quot;:&quot;ken_wo_2018\/ken_wo_2018.png&quot;,&quot;freshempire&quot;:&quot;Fresh_Empire_Q1_2018_v2\/Fresh_Empire_Q1_2018_v2.png&quot;,&quot;myblackmonument&quot;:&quot;micblackmonuments2018\/micblackmonuments2018.png&quot;,&quot;크로스컨트리스키&quot;:&quot;CrossCountrySkiing_IW_2018\/CrossCountrySkiing_IW_2018.png&quot;,&quot;heforshe&quot;:&quot;HeForShe_fixed\/HeForShe_fixed.png&quot;,&quot;شيّرها&quot;:&quot;ZainKSA\/ZainKSA.png&quot;,&quot;7candal&quot;:&quot;TGIT_Scandal_2017_v3\/TGIT_Scandal_2017_v3.png&quot;,&quot;uberindia&quot;:&quot;UberIndia_Q4_17\/UberIndia_Q4_17.png&quot;,&quot;franciscoenperú&quot;:&quot;Pope_Chile_Peru\/Pope_Chile_Peru.png&quot;,&quot;thisisus&quot;:&quot;This_Is_Us_Mid_2018\/This_Is_Us_Mid_2018.png&quot;,&quot;hereweare&quot;:&quot;HereWeAre_v3\/HereWeAre_v3.png&quot;,&quot;bite2winsweepstakes&quot;:&quot;Bite2WinSweepstakes\/Bite2WinSweepstakes.png&quot;,&quot;heatculture&quot;:&quot;NBA_2017_18_MIA\/NBA_2017_18_MIA.png&quot;,&quot;ligadia&quot;:&quot;LigaDia_Emoji_v2\/LigaDia_Emoji_v2.png&quot;,&quot;nebulosagi&quot;:&quot;nebula_IW_2018\/nebula_IW_2018.png&quot;,&quot;greatestshowman&quot;:&quot;Greatest_Showman_Emoji\/Greatest_Showman_Emoji.png&quot;,&quot;chi&quot;:&quot;chi_wo_2018\/chi_wo_2018.png&quot;,&quot;200añosdepureza&quot;:&quot;Lanjaron200emoji\/Lanjaron200emoji.png&quot;,&quot;санныйспорт&quot;:&quot;luge_WO_18\/luge_WO_18.png&quot;,&quot;letsfootball&quot;:&quot;Indian_Super_League_Emoji\/Indian_Super_League_Emoji.png&quot;,&quot;curling&quot;:&quot;curling_IW_18\/curling_IW_18.png&quot;,&quot;beronica&quot;:&quot;RiverdaleS2_2018\/RiverdaleS2_2018.png&quot;,&quot;thegamethatplaysyou&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;мантис&quot;:&quot;mantis_IW_2018\/mantis_IW_2018.png&quot;,&quot;skialpin&quot;:&quot;AlpineSkiing_WO_18\/AlpineSkiing_WO_18.png&quot;,&quot;sabres&quot;:&quot;NHL_2017_2018_Buff_Sabres\/NHL_2017_2018_Buff_Sabres.png&quot;,&quot;lasuertenojuega&quot;:&quot;La_Suerte_No_Juega\/La_Suerte_No_Juega.png&quot;,&quot;jumanji&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;докторстрэндж&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;understandfully&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;cny&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;,&quot;бронза&quot;:&quot;bronze_WO_18\/bronze_WO_18.png&quot;,&quot;welcometowestworld&quot;:&quot;Westworld2\/Westworld2.png&quot;,&quot;whywewearblack&quot;:&quot;TimesUp\/TimesUp.png&quot;,&quot;конькобежныйспорт&quot;:&quot;speedskate_WO_18\/speedskate_WO_18.png&quot;,&quot;동메달&quot;:&quot;bronze_WO_18\/bronze_WO_18.png&quot;,&quot;alienist&quot;:&quot;TNT-Alienist\/TNT-Alienist.png&quot;,&quot;openingceremony&quot;:&quot;openingceremony_WO_18_v2\/openingceremony_WO_18_v2.png&quot;,&quot;den&quot;:&quot;den_WO_2018\/den_WO_2018.png&quot;,&quot;episodioviii&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;单板滑雪&quot;:&quot;snowboard_WO_18\/snowboard_WO_18.png&quot;,&quot;côtélumineux&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;varchie&quot;:&quot;RiverdaleS2_2018\/RiverdaleS2_2018.png&quot;,&quot;primeiraordem&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;ナキア&quot;:&quot;nakia_blackpanther\/nakia_blackpanther.png&quot;,&quot;phantomoftheopera&quot;:&quot;PhantomofTheOpera_2018\/PhantomofTheOpera_2018.png&quot;,&quot;letsgopens&quot;:&quot;NHL_2017_2018_Penguins\/NHL_2017_2018_Penguins.png&quot;,&quot;mne&quot;:&quot;mne_wo_2018\/mne_wo_2018.png&quot;,&quot;thatshowwetalk&quot;:&quot;zeefive\/zeefive.png&quot;,&quot;tga&quot;:&quot;TGA_wo_2018\/TGA_wo_2018.png&quot;,&quot;somuchyay&quot;:&quot;ANZ_MardiGras_2018\/ANZ_MardiGras_2018.png&quot;,&quot;sanremo18&quot;:&quot;TIM_Sanremo_2018-v3\/TIM_Sanremo_2018-v3.png&quot;,&quot;bbvawallet&quot;:&quot;BBVAWallet_emoji\/BBVAWallet_emoji.png&quot;,&quot;thesunkenplace&quot;:&quot;GetOutMovie\/GetOutMovie.png&quot;,&quot;ショートトラックスピードスケート&quot;:&quot;shorttrackski_WO_18\/shorttrackski_WO_18.png&quot;,&quot;jumanjimovie&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;yaynz&quot;:&quot;ANZ_MardiGras_2018\/ANZ_MardiGras_2018.png&quot;,&quot;アズ恋&quot;:&quot;Azurlane_v2\/Azurlane_v2.png&quot;,&quot;wakandaforever&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;エースリー満員御礼&quot;:&quot;mankaicompany\/mankaicompany.png&quot;,&quot;mrswelche&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;episodeviii&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;nhlbruins&quot;:&quot;NHL_2017_2018_NHLBruins\/NHL_2017_2018_NHLBruins.png&quot;,&quot;blackhistorymonth&quot;:&quot;BlackHistoryMonth\/BlackHistoryMonth.png&quot;,&quot;sharethemoment&quot;:&quot;This_Is_Us_Mid_2018\/This_Is_Us_Mid_2018.png&quot;,&quot;평창올림픽성화봉송&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;strongandproud&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;droide&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;spacestone&quot;:&quot;Loki_IW_2018\/Loki_IW_2018.png&quot;,&quot;фристайл&quot;:&quot;FreestyleSkiing_IW_18\/FreestyleSkiing_IW_18.png&quot;,&quot;vegasborn&quot;:&quot;NHL_2017_2018_VegasKnights_v2\/NHL_2017_2018_VegasKnights_v2.png&quot;,&quot;starwarsdieletztenjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;martinlutherkingday&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;mlkjrday&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;starwarsepisodioviii&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;getthismanashield&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;phi&quot;:&quot;PHI_wo_2018\/PHI_wo_2018.png&quot;,&quot;metoo&quot;:&quot;MeToo_v3\/MeToo_v3.png&quot;,&quot;железныйчеловек&quot;:&quot;ironman_IW_2018_v3\/ironman_IW_2018_v3.png&quot;,&quot;relevodelaantorcha&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;amexcobalt&quot;:&quot;AmexCobalt_v2\/AmexCobalt_v2.png&quot;,&quot;wemetontwitter&quot;:&quot;WeMetOnt_Emoji\/WeMetOnt_Emoji.png&quot;,&quot;nbakicks&quot;:&quot;FootLocker-2018\/FootLocker-2018.png&quot;,&quot;ビービー8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;starkindustries&quot;:&quot;ironman_IW_2018_v3\/ironman_IW_2018_v3.png&quot;,&quot;tesseract&quot;:&quot;Loki_IW_2018\/Loki_IW_2018.png&quot;,&quot;lux&quot;:&quot;lux_wo_2018\/lux_wo_2018.png&quot;,&quot;droids&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;nzl&quot;:&quot;nzl_wo_2018\/nzl_wo_2018.png&quot;,&quot;navakarnatakanirmana&quot;:&quot;congressq1\/congressq1.png&quot;,&quot;beawarrior&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;modopapa&quot;:&quot;Pope_Chile_Peru\/Pope_Chile_Peru.png&quot;,&quot;jw2&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;elezioni2018&quot;:&quot;elezioni2018_v2\/elezioni2018_v2.png&quot;,&quot;いろはす白桃でリラックス&quot;:&quot;CocaColaJapanPeach\/CocaColaJapanPeach.png&quot;,&quot;thisisthepepsi&quot;:&quot;Pepsi_Halftime_SuperBowl_2018_v2\/Pepsi_Halftime_SuperBowl_2018_v2.png&quot;,&quot;mbcthevoicekids&quot;:&quot;MBC_The_Voice\/MBC_The_Voice.png&quot;,&quot;高山滑雪&quot;:&quot;AlpineSkiing_WO_18\/AlpineSkiing_WO_18.png&quot;,&quot;stillmarching&quot;:&quot;Votes_for_Women\/Votes_for_Women.png&quot;,&quot;gringomovie&quot;:&quot;gringomovie\/gringomovie.png&quot;,&quot;theroom&quot;:&quot;The_Disaster_Artist_v2\/The_Disaster_Artist_v2.png&quot;,&quot;nakia&quot;:&quot;nakia_blackpanther\/nakia_blackpanther.png&quot;,&quot;911fox&quot;:&quot;911_Fox\/911_Fox.png&quot;,&quot;эстафетаогня&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;feelpretty&quot;:&quot;feelpretty_v2\/feelpretty_v2.png&quot;,&quot;westworlds2&quot;:&quot;Westworld2\/Westworld2.png&quot;,&quot;응원해요&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;prk&quot;:&quot;prk_wo_2018\/prk_wo_2018.png&quot;,&quot;welcometothejungle&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;guardiansofthegalaxy&quot;:&quot;groot_IW_2018_v2\/groot_IW_2018_v2.png&quot;,&quot;latovegasfox&quot;:&quot;Fox_LA_Vegas\/Fox_LA_Vegas.png&quot;,&quot;mlk50&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;yotes&quot;:&quot;NHL_2017_2018_Buff_Coyotes\/NHL_2017_2018_Buff_Coyotes.png&quot;,&quot;starwarslesderniersjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;ビットフライヤー&quot;:&quot;bitcoin_Emoji\/bitcoin_Emoji.png&quot;,&quot;wegohard&quot;:&quot;NBA_2017_18_BKLYN\/NBA_2017_18_BKLYN.png&quot;,&quot;newmenufeels&quot;:&quot;Red_Lobster_Next_Gen\/Red_Lobster_Next_Gen.png&quot;,&quot;jp25&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;motw&quot;:&quot;JustinTimberlake_MOTW\/JustinTimberlake_MOTW.png&quot;,&quot;тёмнаясторона&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;atfr&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;paixpourmoi&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;开幕式&quot;:&quot;openingceremony_WO_18_v2\/openingceremony_WO_18_v2.png&quot;,&quot;euroleague&quot;:&quot;Euroleague_2018_v2\/Euroleague_2018_v2.png&quot;,&quot;серебро&quot;:&quot;silver_WO_18_v2\/silver_WO_18_v2.png&quot;,&quot;droides&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;soldadodelinvierno&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;tur&quot;:&quot;TUR_wo_2018\/TUR_wo_2018.png&quot;,&quot;séunaguerrera&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;bhm&quot;:&quot;BlackHistoryMonth\/BlackHistoryMonth.png&quot;,&quot;우리선수화이팅&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;mahindraracing&quot;:&quot;MahindraRacing_v2\/MahindraRacing_v2.png&quot;,&quot;クロスカントリースキー&quot;:&quot;CrossCountrySkiing_IW_2018\/CrossCountrySkiing_IW_2018.png&quot;,&quot;звёздныевойны&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;idontplay&quot;:&quot;Proud_Mary_Movie_Emoji_v3\/Proud_Mary_Movie_Emoji_v3.png&quot;,&quot;capitaoamerica&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;jumanji2017&quot;:&quot;Jumanji_Emoji\/Jumanji_Emoji.png&quot;,&quot;blackhero&quot;:&quot;micblackmonuments2018\/micblackmonuments2018.png&quot;,&quot;thankyoumlk50&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;porglife&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;mrswhatsit&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;gojetsgo&quot;:&quot;NHL_2017_2018_Jets\/NHL_2017_2018_Jets.png&quot;,&quot;smokymountaincolonel&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;bullsnation&quot;:&quot;NBA_2017_18_CHI\/NBA_2017_18_CHI.png&quot;,&quot;crispypanpizza&quot;:&quot;digiornonotdelivery\/digiornonotdelivery.png&quot;,&quot;rathalos&quot;:&quot;MHW_2018\/MHW_2018.png&quot;,&quot;bafta2018&quot;:&quot;BAFTA\/BAFTA.png&quot;,&quot;passioneer&quot;:&quot;MahindraRacing_v2\/MahindraRacing_v2.png&quot;,&quot;gbr&quot;:&quot;gbr_wo_2018\/gbr_wo_2018.png&quot;,&quot;ハルク&quot;:&quot;hulk_IW_2018_v2\/hulk_IW_2018_v2.png&quot;,&quot;senhoraqueé&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;mammamia2&quot;:&quot;MammaMia2\/MammaMia2.png&quot;,&quot;나에게평화란&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;nobodylivesforever&quot;:&quot;AlteredCarbon\/AlteredCarbon.png&quot;,&quot;bel&quot;:&quot;bel_WO_2018\/bel_WO_2018.png&quot;,&quot;followtherabbit&quot;:&quot;followtherabbit\/followtherabbit.png&quot;,&quot;ネビュラiw&quot;:&quot;nebula_IW_2018\/nebula_IW_2018.png&quot;,&quot;burjkhalifa&quot;:&quot;Emaar_Emoji_v4\/Emaar_Emoji_v4.png&quot;,&quot;mlk&quot;:&quot;ThankYouMLK50\/ThankYouMLK50.png&quot;,&quot;لا_يحدك_شي&quot;:&quot;ZainKSA\/ZainKSA.png&quot;,&quot;cze&quot;:&quot;cze_WO_2018\/cze_WO_2018.png&quot;,&quot;jam&quot;:&quot;jam_wo_2018\/jam_wo_2018.png&quot;,&quot;goteamusa&quot;:&quot;teamusa_WO_18\/teamusa_WO_18.png&quot;,&quot;hkg&quot;:&quot;HKG_wo_2018\/HKG_wo_2018.png&quot;,&quot;jurassicworld2&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;blacklivesmatter&quot;:&quot;BlackHistoryMonth\/BlackHistoryMonth.png&quot;,&quot;senhordasestrelas&quot;:&quot;starlord_IW_2018_v2\/starlord_IW_2018_v2.png&quot;,&quot;elezioni&quot;:&quot;elezioni2018_v2\/elezioni2018_v2.png&quot;,&quot;starlord&quot;:&quot;starlord_IW_2018_v2\/starlord_IW_2018_v2.png&quot;,&quot;viña2018&quot;:&quot;entel2018\/entel2018.png&quot;,&quot;sautaski&quot;:&quot;skijump_WO_18\/skijump_WO_18.png&quot;,&quot;westworldseason2&quot;:&quot;Westworld2\/Westworld2.png&quot;,&quot;nordiccombined&quot;:&quot;nordic_WO_18\/nordic_WO_18.png&quot;,&quot;legendaryoutlaw&quot;:&quot;starlord_IW_2018_v2\/starlord_IW_2018_v2.png&quot;,&quot;preds&quot;:&quot;NHL_2017_2018_Preds\/NHL_2017_2018_Preds.png&quot;,&quot;pol&quot;:&quot;pol_wo_2018\/pol_wo_2018.png&quot;,&quot;isr&quot;:&quot;isr_wo_2018\/isr_wo_2018.png&quot;,&quot;ドクターストレンジ&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;эпизод8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;bb9e&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;allcaps&quot;:&quot;NHL_2017_2018_Caps\/NHL_2017_2018_Caps.png&quot;,&quot;mrssoundso&quot;:&quot;mrswhatsit\/mrswhatsit.png&quot;,&quot;дракс&quot;:&quot;drax_IW_2018\/drax_IW_2018.png&quot;,&quot;ecu&quot;:&quot;ecu_WO_2018\/ecu_WO_2018.png&quot;,&quot;雪车&quot;:&quot;Bobsleigh_IW_2018\/Bobsleigh_IW_2018.png&quot;,&quot;revezamentodatochaolimpica&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;bbodio&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;smokymountainbbq&quot;:&quot;KFC_Smoky_Mountain_BBQ_v2\/KFC_Smoky_Mountain_BBQ_v2.png&quot;,&quot;хоккей&quot;:&quot;hockey_WO_18_v2\/hockey_WO_18_v2.png&quot;,&quot;milehighbasketball&quot;:&quot;NBA_2017_18_DEN_v2\/NBA_2017_18_DEN_v2.png&quot;,&quot;hautledrapeau&quot;:&quot;flytheflag_olympics\/flytheflag_olympics.png&quot;,&quot;franciscoenchile&quot;:&quot;Pope_Chile_Peru\/Pope_Chile_Peru.png&quot;,&quot;srb&quot;:&quot;SRB_wo_2018\/SRB_wo_2018.png&quot;,&quot;frenchfab&quot;:&quot;France_BPI_v3\/France_BPI_v3.png&quot;,&quot;ind&quot;:&quot;ind_wo_2018\/ind_wo_2018.png&quot;,&quot;suerteono&quot;:&quot;La_Suerte_No_Juega\/La_Suerte_No_Juega.png&quot;,&quot;dundeetourismad&quot;:&quot;Tourism_Australia_Dundee_v5\/Tourism_Australia_Dundee_v5.png&quot;,&quot;draxthedestroyer&quot;:&quot;drax_IW_2018\/drax_IW_2018.png&quot;,&quot;okoye&quot;:&quot;okoye_blackpanther\/okoye_blackpanther.png&quot;,&quot;spidey&quot;:&quot;spiderman_IW_2018\/spiderman_IW_2018.png&quot;,&quot;ukr&quot;:&quot;UKR_wo_2018\/UKR_wo_2018.png&quot;,&quot;ロキ&quot;:&quot;Loki_IW_2018\/Loki_IW_2018.png&quot;,&quot;starwarsepisodeviii&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;motwtour&quot;:&quot;JustinTimberlake_MOTW\/JustinTimberlake_MOTW.png&quot;,&quot;фигурноекатание&quot;:&quot;figureskating_IW_18\/figureskating_IW_18.png&quot;,&quot;letsgooilers&quot;:&quot;NHL_2017_2018_Edmonton\/NHL_2017_2018_Edmonton.png&quot;,&quot;sracuál&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;puremagic&quot;:&quot;NBA_2017_18_ORL\/NBA_2017_18_ORL.png&quot;,&quot;開会式&quot;:&quot;openingceremony_WO_18_v2\/openingceremony_WO_18_v2.png&quot;,&quot;lie&quot;:&quot;lie_wo_2018\/lie_wo_2018.png&quot;,&quot;mkd&quot;:&quot;MKD_wo_2018\/MKD_wo_2018.png&quot;,&quot;maquinadecombate&quot;:&quot;warmachine_IW_2018\/warmachine_IW_2018.png&quot;,&quot;soldatdelhiver&quot;:&quot;wintersoldier_IW_2018\/wintersoldier_IW_2018.png&quot;,&quot;starwarsosultimosjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;incredibles2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;スターロード&quot;:&quot;starlord_IW_2018_v2\/starlord_IW_2018_v2.png&quot;,&quot;локи&quot;:&quot;Loki_IW_2018\/Loki_IW_2018.png&quot;,&quot;ripcity&quot;:&quot;NBA_2017_18_POR\/NBA_2017_18_POR.png&quot;,&quot;lakeshow&quot;:&quot;NBA_2017_18_LAL\/NBA_2017_18_LAL.png&quot;,&quot;m4electro&quot;:&quot;MahindraRacing_v2\/MahindraRacing_v2.png&quot;,&quot;o2music&quot;:&quot;followtherabbit_o2\/followtherabbit_o2.png&quot;,&quot;señoracuál&quot;:&quot;mrswhich\/mrswhich.png&quot;,&quot;wrinkleintime&quot;:&quot;megmurray\/megmurray.png&quot;,&quot;unidosporlaesperanza&quot;:&quot;Pope_Chile_Peru\/Pope_Chile_Peru.png&quot;,&quot;esp&quot;:&quot;esp_wo_2018\/esp_wo_2018.png&quot;,&quot;episode8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;cro&quot;:&quot;cro_wo_2018\/cro_wo_2018.png&quot;,&quot;imadisasterartist&quot;:&quot;The_Disaster_Artist_v2\/The_Disaster_Artist_v2.png&quot;,&quot;개회식&quot;:&quot;openingceremony_WO_18_v2\/openingceremony_WO_18_v2.png&quot;,&quot;sheinspiresme&quot;:&quot;HereWeAre_v3\/HereWeAre_v3.png&quot;,&quot;nyfw&quot;:&quot;NYFW2018\/NYFW2018.png&quot;,&quot;discoverwestworld&quot;:&quot;Westworld2\/Westworld2.png&quot;,&quot;davidduchovny&quot;:&quot;X-Files\/X-Files.png&quot;,&quot;slo&quot;:&quot;SLO_wo_2018\/SLO_wo_2018.png&quot;,&quot;irl&quot;:&quot;irl_wo_2018\/irl_wo_2018.png&quot;,&quot;mydubainewyear&quot;:&quot;Emaar_Emoji_v4\/Emaar_Emoji_v4.png&quot;,&quot;первыйорден&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;lifefindsaway&quot;:&quot;Jurassic_World_emoji_v2\/Jurassic_World_emoji_v2.png&quot;,&quot;сноуборд&quot;:&quot;snowboard_WO_18\/snowboard_WO_18.png&quot;,&quot;聖火リレー&quot;:&quot;OlympicFlameEmoji\/OlympicFlameEmoji.png&quot;,&quot;fannfl&quot;:&quot;Fan_NFL_emoji_v2\/Fan_NFL_emoji_v2.png&quot;,&quot;tmltalk&quot;:&quot;NHL_2017_2018_MapleLeafs\/NHL_2017_2018_MapleLeafs.png&quot;,&quot;joethemug&quot;:&quot;GiveJoeABreak\/GiveJoeABreak.png&quot;,&quot;droiden&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;银牌&quot;:&quot;silver_WO_18_v2\/silver_WO_18_v2.png&quot;,&quot;ファーストオーダー&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;capitãoamérica&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;светлаясторона&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;uzb&quot;:&quot;UZB_wo_2018\/UZB_wo_2018.png&quot;,&quot;maestrosdelacostura&quot;:&quot;MaestrosDeLaCostura\/MaestrosDeLaCostura.png&quot;,&quot;mortgageconfidently&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;htgawm&quot;:&quot;TGIT_HTGAWM_2017_v3\/TGIT_HTGAWM_2017_v3.png&quot;,&quot;avaduvernay&quot;:&quot;AvaDuVernay\/AvaDuVernay.png&quot;,&quot;авадюверней&quot;:&quot;AvaDuVernay\/AvaDuVernay.png&quot;,&quot;ironman&quot;:&quot;ironman_IW_2018_v3\/ironman_IW_2018_v3.png&quot;,&quot;rocketraccoon&quot;:&quot;rocket_IW_2018_v2\/rocket_IW_2018_v2.png&quot;,&quot;máquinadeguerra&quot;:&quot;warmachine_IW_2018\/warmachine_IW_2018.png&quot;,&quot;starwarslosúltimosjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;bb8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;arg&quot;:&quot;arg_WO_2018\/arg_WO_2018.png&quot;,&quot;droidi&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;奥林匹克&quot;:&quot;olympics_WO_18_v2\/olympics_WO_18_v2.png&quot;,&quot;ウォーマシン&quot;:&quot;warmachine_IW_2018\/warmachine_IW_2018.png&quot;,&quot;ノルディック複合&quot;:&quot;nordic_WO_18\/nordic_WO_18.png&quot;,&quot;tonystark&quot;:&quot;ironman_IW_2018_v3\/ironman_IW_2018_v3.png&quot;,&quot;goequipefra&quot;:&quot;airfranceolympics\/airfranceolympics.png&quot;,&quot;звёздныевойныэпизод8&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;and&quot;:&quot;and_WO_2018\/and_WO_2018.png&quot;,&quot;viedeporg&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;tgit&quot;:&quot;TGIT_Popcorn_v2\/TGIT_Popcorn_v2.png&quot;,&quot;signorachi&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;cheddarbaybiscuits&quot;:&quot;Red_Lobster_Next_Gen\/Red_Lobster_Next_Gen.png&quot;,&quot;лыжныегонки&quot;:&quot;CrossCountrySkiing_IW_2018\/CrossCountrySkiing_IW_2018.png&quot;,&quot;steverogers&quot;:&quot;captainamerica_IW_2018\/captainamerica_IW_2018.png&quot;,&quot;lat&quot;:&quot;lat_wo_2018\/lat_wo_2018.png&quot;,&quot;ladosombrio&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;peace4me&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;прыжкистрамплина&quot;:&quot;skijump_WO_18\/skijump_WO_18.png&quot;,&quot;nbb&quot;:&quot;Emoji_NBB_2017_2018\/Emoji_NBB_2017_2018.png&quot;,&quot;tog&quot;:&quot;TOG_wo_2018\/TOG_wo_2018.png&quot;,&quot;クロノジェネシス&quot;:&quot;shadowverse_emoji\/shadowverse_emoji.png&quot;,&quot;ビービーエイト&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;shorttrackskating&quot;:&quot;shorttrackski_WO_18\/shorttrackski_WO_18.png&quot;,&quot;por&quot;:&quot;por_wo_2018\/por_wo_2018.png&quot;,&quot;дройд&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;máquinadecombate&quot;:&quot;warmachine_IW_2018\/warmachine_IW_2018.png&quot;,&quot;bughead&quot;:&quot;RiverdaleS2_2018\/RiverdaleS2_2018.png&quot;,&quot;olympictruce&quot;:&quot;Peace_Olympics_EMOJI_v3\/Peace_Olympics_EMOJI_v3.png&quot;,&quot;スターウォーズ最後のジェダイ&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;bra&quot;:&quot;bra_WO_2018_v2\/bra_WO_2018_v2.png&quot;,&quot;vedovanera&quot;:&quot;blackwidow_IW_2018\/blackwidow_IW_2018.png&quot;,&quot;señoraquién&quot;:&quot;mrswho\/mrswho.png&quot;,&quot;tissuetuesday&quot;:&quot;This_Is_Us_Mid_2018\/This_Is_Us_Mid_2018.png&quot;,&quot;swe&quot;:&quot;swe_wo_2018\/swe_wo_2018.png&quot;,&quot;honorview10&quot;:&quot;Huawei_Honorglobal_Launch_Emoji_v2\/Huawei_Honorglobal_Launch_Emoji_v2.png&quot;,&quot;thevoiceuk&quot;:&quot;thevoiceuk_2018\/thevoiceuk_2018.png&quot;,&quot;gringofilm&quot;:&quot;gringomovie\/gringomovie.png&quot;,&quot;manofthewoods&quot;:&quot;JustinTimberlake_MOTW\/JustinTimberlake_MOTW.png&quot;,&quot;gliultimijedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;espejopúblico&quot;:&quot;EspejoPublico_2017_2018\/EspejoPublico_2017_2018.png&quot;,&quot;arie&quot;:&quot;Bachelor_2018_v3\/Bachelor_2018_v3.png&quot;,&quot;閉会式&quot;:&quot;closingceremony_WO_18\/closingceremony_WO_18.png&quot;,&quot;timmusic&quot;:&quot;TIM_Sanremo_2018-v3\/TIM_Sanremo_2018-v3.png&quot;,&quot;mad&quot;:&quot;mad_wo_2018\/mad_wo_2018.png&quot;,&quot;국가대표&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;closingceremony&quot;:&quot;closingceremony_WO_18\/closingceremony_WO_18.png&quot;,&quot;phantom30&quot;:&quot;PhantomofTheOpera_2018\/PhantomofTheOpera_2018.png&quot;,&quot;ポーグ&quot;:&quot;The_Last_Jedi_Porg_emoji_v5\/The_Last_Jedi_Porg_emoji_v5.png&quot;,&quot;국가대표고마워&quot;:&quot;WinterOlympics_KoreanMinistry\/WinterOlympics_KoreanMinistry.png&quot;,&quot;lesderniersjedi&quot;:&quot;The_Last_Jedi_BB8_emoji_v3\/The_Last_Jedi_BB8_emoji_v3.png&quot;,&quot;биатлон&quot;:&quot;Biathlon_IO_18\/Biathlon_IO_18.png&quot;,&quot;shuri&quot;:&quot;shuri_blackpanther\/shuri_blackpanther.png&quot;,&quot;fra&quot;:&quot;fra_wo_2018\/fra_wo_2018.png&quot;,&quot;dieunglaublichen2&quot;:&quot;incredibles2_v3\/incredibles2_v3.png&quot;,&quot;medailledargent&quot;:&quot;silver_WO_18_v2\/silver_WO_18_v2.png&quot;,&quot;feiticeiraescarlate&quot;:&quot;Scarlet_Witch\/Scarlet_Witch.png&quot;,&quot;droid&quot;:&quot;The_Last_Jedi_BB-9E_emoji_v4\/The_Last_Jedi_BB-9E_emoji_v4.png&quot;,&quot;thor&quot;:&quot;thor_IW_2018\/thor_IW_2018.png&quot;,&quot;wakanda&quot;:&quot;blackpanther_live_v3\/blackpanther_live_v3.png&quot;,&quot;alleyesnorth&quot;:&quot;NBA_2017_18_MIN\/NBA_2017_18_MIN.png&quot;,&quot;rocketmortgage&quot;:&quot;QuickenLoans\/QuickenLoans.png&quot;,&quot;doctorstrange&quot;:&quot;drstrange_IW_2018_v2\/drstrange_IW_2018_v2.png&quot;,&quot;happychinesenewyear&quot;:&quot;lunarnewyear2018_v2\/lunarnewyear2018_v2.png&quot;},&quot;pollingOptions&quot;:{&quot;focusedInterval&quot;:10000,&quot;blurredInterval&quot;:100000,&quot;backoffFactor&quot;:2,&quot;backoffEmptyResponseLimit&quot;:2,&quot;pauseAfterBackoff&quot;:true,&quot;resumeItemCount&quot;:100,&quot;pauseItemCount&quot;:20},&quot;injectComposedTweets&quot;:true,&quot;timeline_url&quot;:&quot;\/i\/timeline&quot;,&quot;show_sms_confirmation_dialog&quot;:false,&quot;profileEditingCSSBundle&quot;:&quot;https:\/\/abs.twimg.com\/a\/1518842147\/css\/t1\/twitter_profile_editing.bundle.css&quot;,&quot;liveVideoContinuePlayingBehindModalsEnabled&quot;:true,&quot;timelineCacheTTLMillis&quot;:60000,&quot;trendsCacheKey&quot;:&quot;ff1001d4db&quot;,&quot;decider_personalized_trends&quot;:true,&quot;trendsEndpoint&quot;:&quot;\/i\/trends&quot;,&quot;wtfOptions&quot;:{&quot;pc&quot;:true,&quot;connections&quot;:true,&quot;limit&quot;:3,&quot;display_location&quot;:&quot;wtf-component&quot;,&quot;dismissable&quot;:true,&quot;disabled&quot;:false},&quot;inlineTweetComposeEnabled&quot;:false,&quot;inlineTweetComposeOptions&quot;:{&quot;text&quot;:null},&quot;smartNuxEnabled&quot;:false,&quot;liveVideo&quot;:{&quot;enabled&quot;:true,&quot;pollingEnabled&quot;:true,&quot;stateRefreshIntervalInSeconds&quot;:300},&quot;videoGuide&quot;:{&quot;enabled&quot;:false,&quot;isPollingEnabled&quot;:false,&quot;isStatePollingEnabled&quot;:false,&quot;statePollingIntervalInSeconds&quot;:60,&quot;pollingIntervalInSeconds&quot;:300},&quot;anchoredSidebars&quot;:{&quot;enabled&quot;:false},&quot;initialState&quot;:{&quot;title&quot;:&quot;Twitter&quot;,&quot;section&quot;:&quot;home&quot;,&quot;module&quot;:&quot;app\/pages\/home&quot;,&quot;cache_ttl&quot;:300,&quot;body_class_names&quot;:&quot;three-col logged-in user-style-goodmeier ms-windows asian zh-cn enhanced-mini-profile&quot;,&quot;doc_class_names&quot;:&quot;route-home&quot;,&quot;route_name&quot;:&quot;home&quot;,&quot;page_container_class_names&quot;:&quot;AppContent wrapper wrapper-home&quot;,&quot;ttft_navigation&quot;:false}}">
+
+
+<input type="hidden" class="swift-boot-module" value="app/pages/home">
+<input type="hidden" id="swift-module-path" value="https://abs.twimg.com/k/swift/zh-cn">
+
+
+<script src="https://abs.twimg.com/k/zh-cn/init.zh-cn.520b1b8e3938d76b97e2.js" async=""></script>
+
+</body>
+</html>
