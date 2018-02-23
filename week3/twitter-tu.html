@@ -20,8 +20,15 @@
             transform: translate(-50%, -47.5%)
         }
 
-        .HeartAnimation :hover,.liked{
+        .HeartAnimation :hover{
             background-position: 3.571428571428571%
+        }
+
+        .liked .HeartAnimation{
+            background-position: right;
+        }
+        .like-canceled{
+            background-position: left;
         }
 
         @keyframes heart-burst {
@@ -45,7 +52,9 @@
     </style>
 </head>
 <body>
-<div class="HeartAnimation"></div>
+<div class="wrapper">
+    <div class="HeartAnimation"></div>
+</div>
 <script src="../public/jquery-3.2.1.js"></script>
 <script>
     $('.HeartAnimation').click(function () {
