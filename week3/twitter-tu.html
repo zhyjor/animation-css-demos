@@ -20,16 +20,18 @@
             transform: translate(-50%, -47.5%)
         }
 
-        .HeartAnimation :hover{
-            background-position: 3.571428571428571%
+        .like-active {
+            animation-timing-function: steps(28);
+            animation-name: heart-burst;
+            animation-duration: .8s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            display: inline-block
         }
 
-        .liked .HeartAnimation{
-            background-position: right;
-        }
-        .like-canceled{
-            background-position: left;
-        }
+        /*.HeartAnimation :hover {*/
+        /*background-position: 3.571428571428571%*/
+        /*}*/
 
         @keyframes heart-burst {
             0% {
@@ -41,13 +43,6 @@
             }
         }
 
-         .like-active {
-            animation-timing-function: steps(28);
-            animation-name: heart-burst;
-            animation-duration: .8s;
-            animation-iteration-count: 1;
-            display: inline-block
-        }
 
     </style>
 </head>
@@ -59,10 +54,7 @@
 <script>
     $('.HeartAnimation').click(function () {
         var _this = $(this)
-        _this.addClass('like-active')
-        setTimeout(function () {
-//            _this.removeClass('like-active')
-        },900)
+        _this.hasClass('like-active') ? _this.removeClass('like-active') : _this.addClass('like-active')
     })
 </script>
 </body>
