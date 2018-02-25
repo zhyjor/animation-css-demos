@@ -27,11 +27,10 @@
             animation-iteration-count: 1;
             display: inline-block;
             animation-fill-mode: forwards;
-        / / 动画保留为最后一帧
 
         }
 
-        /*.HeartAnimation:hover {*/
+        /*.HeartAnimation :hover {*/
         /*background-position: 3.571428571428571%*/
         /*}*/
 
@@ -44,7 +43,6 @@
                 background-position: right
             }
         }
-
     </style>
 </head>
 <body>
@@ -53,7 +51,7 @@
 <script>
     $('.HeartAnimation').click(function () {
         var _this = $(this)
-        _this.hasClass('like-active')?_this.removeClass('like-active'):_this.addClass('like-active')
+        _this.hasClass('like-active') ? _this.removeClass('like-active') : _this.addClass('like-active')
     })
 </script>
 </body>
