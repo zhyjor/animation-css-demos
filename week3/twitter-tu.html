@@ -11,7 +11,7 @@
             background-image: url(web_heart_animation_edge.png);
             background-position: left;
             background-repeat: no-repeat;
-            background-size: 2900%;
+            /*background-size: 2900%;*/
             height: 100px;
             width: 100px;
             left: 50%;
@@ -20,16 +20,20 @@
             transform: translate(-50%, -47.5%)
         }
 
-        .HeartAnimation :hover{
-            background-position: 3.571428571428571%
+        .like-active {
+            animation-timing-function: steps(28);
+            animation-name: heart-burst;
+            animation-duration: .8s;
+            animation-iteration-count: 1;
+            display: inline-block;
+            animation-fill-mode: forwards;
+        / / 动画保留为最后一帧
+
         }
 
-        .liked .HeartAnimation{
-            background-position: right;
-        }
-        .like-canceled{
-            background-position: left;
-        }
+        /*.HeartAnimation:hover {*/
+        /*background-position: 3.571428571428571%*/
+        /*}*/
 
         @keyframes heart-burst {
             0% {
@@ -41,28 +45,15 @@
             }
         }
 
-         .like-active {
-            animation-timing-function: steps(28);
-            animation-name: heart-burst;
-            animation-duration: .8s;
-            animation-iteration-count: 1;
-            display: inline-block
-        }
-
     </style>
 </head>
 <body>
-<div class="wrapper">
-    <div class="HeartAnimation"></div>
-</div>
+<div class="HeartAnimation"></div>
 <script src="../public/jquery-3.2.1.js"></script>
 <script>
     $('.HeartAnimation').click(function () {
         var _this = $(this)
-        _this.addClass('like-active')
-        setTimeout(function () {
-//            _this.removeClass('like-active')
-        },900)
+        _this.hasClass('like-active')?_this.removeClass('like-active'):_this.addClass('like-active')
     })
 </script>
 </body>
