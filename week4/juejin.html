@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no"
+          name="viewport">
+
+    <style type="text/css">
+        .avatar-wrapper {
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            padding: 2.5rem;
+        }
+
+        .avatar {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: 7.5rem;
+            height: 7.5rem;
+            background-color: #f9f9f9;
+            border-radius: 50%
+        }
+
+        .avatar:hover {
+            -webkit-transform: rotate(666turn);
+            transform: rotate(666turn);
+            transition-delay: 1s;
+            transition-property: all;
+            transition-duration: 59s;
+            transition-timing-function: cubic-bezier(.34, 0, .84, 1)
+        }
+
+        .avatar {
+            display: inline-block;
+            position: relative;
+            background-position: 50%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: #eee;
+        }
+
+    </style>
+</head>
+<body>
+<div class="avatar-wrapper">
+    <div class="avatar"
+         style="background-image: url('photo_400x400.jpg');"></div>
+</div>
+</body>
+</html>
