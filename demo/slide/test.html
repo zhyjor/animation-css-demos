@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="referrer" content="same-origin"/>
+    <title>slide</title>
+    <script src="//common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+</head>
+<body style="height: 100vh">
+<script src="https://files.cnblogs.com/files/candy99/jquery1.11.1.js"></script>
+<link rel="stylesheet" href="https://files.cnblogs.com/files/candy99/slider.min.css">
+<div style="margin-bottom: 20px;overflow: hidden;box-shadow: 0 2px 16px #ddd;background-color:#fff;height:360px;">
+    <div id="imgBar" style="margin:0 auto;width:1280px;">
+    </div>
+</div>
+<script src="https://files.cnblogs.com/files/lianmin/slider1.2.min.js"></script>
+<script type="text/javascript">
+
+    $("#imgBar").slider({
+        imgs: [
+            "https://images0.cnblogs.com/blog/708426/201501/080209549216360.jpg",
+            "https://images0.cnblogs.com/blog/708426/201501/100557406251638.jpg",
+            "https://images0.cnblogs.com/blog/708426/201501/100602118284450.jpg"],
+        scale: 128 / 36,
+        border: true,
+        delay: 2200,
+        x: 10,
+        y: 3
+    });
+
+</script>
+<script type="text/javascript">
+
+    /* 鼠标特效 */
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+        $("body").click(function(e) {
+            var a = new Array("富强","民主","文明","和谐","自由","平等","公正","法治","爱国","敬业","诚信","友善");
+            var $i = $("<span/>").text(a[a_idx]);
+            a_idx = (a_idx + 1) % a.length;
+            var x = e.pageX,
+                y = e.pageY;
+            $i.css({
+                "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+                "top": y - 20,
+                "left": x,
+                "position": "absolute",
+                "font-weight": "bold",
+                "color": "rgb(72,85,137)"
+            });
+            $("body").append($i);
+            $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                },
+                1500,
+                function() {
+                    $i.remove();
+                });
+        });
+    });
+
+</script>
+
+</body>
+</html>
