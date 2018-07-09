@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>SVG-loading</title>
+        <style type="text/css">
+            .mouth {
+            stroke-dasharray: 60, 95;
+            stroke-dashoffset: 0;
+            animation: mouth 0.8s linear infinite;
+            /*transform-origin: 50% 50%;*/
+            transform-origin: 50px 70px;
+            transform: rotate(-80deg);
+            }
+            .eye {
+            opacity: 1;
+            }
+
+            @keyframes mouth {
+            0% {
+            transform: rotate(-80deg);
+            stroke-dasharray: 60, 95;
+            stroke-dashoffset: 0;
+            }
+            40% {
+            transform: rotate(280deg);
+            stroke-dasharray: 60, 95;
+            stroke-dashoffset: 0;
+            }
+            70%, 100% {
+            transform: rotate(280deg);
+            stroke-dashoffset: -23;
+            stroke-dasharray: 42, 95;
+            }
+            }
+            @keyframes eye {
+            0% {
+            opacity: 0;
+            }
+            49% {
+            opacity: 0;
+            }
+            50%, 100% {
+            opacity: 1;
+            }
+            }
+        </style>
+        <script type="text/javascript">
+            window.addEventListener('load', function() {
+            document.querySelector('#ani').style.display = ''
+            })
+        </script>
+    </head>
+    <body>
+        <div style="width: 300px;height:300px;margin: 200px auto;position: relative">
+            <div style="color:#666;position: absolute;top: -25px;width: 230px;left:-10px;">0,0 <span style="float:right;">x</span></div>
+            <div style="color:#666;position: absolute;top:200px;left: -15px"><span style="float:right;">y</span></div>
+            <svg width="400" height="400" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="position: absolute;left: -40px;top: -40px;">
+
+                <line x1="20" y1="40" x2="120" y2="40" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="20" y1="60" x2="120" y2="60" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="20" y1="80" x2="120" y2="80" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="20" y1="100" x2="120" y2="100" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="20" y1="120" x2="120" y2="120" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+
+                <line x1="40" y1="20" x2="40" y2="120" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="60" y1="20" x2="60" y2="120" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="80" y1="20" x2="80" y2="120" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="100" y1="20" x2="100" y2="120" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+                <line x1="120" y1="20" x2="120" y2="120" style="stroke: #e5e5e5; stroke-dasharray: 2 2;" />
+
+                <line x1="20" y1="20" x2="130" y2="20" style="stroke: #666;" />
+                <line x1="128" y1="18" x2="130" y2="20" style="stroke: #666;" />
+                <line x1="128" y1="22" x2="130" y2="20" style="stroke: #666;" />
+
+                <line x1="20" y1="20" x2="20" y2="130" style="stroke: #666;" />
+                <line x1="18" y1="128" x2="20" y2="130" style="stroke: #666;" />
+                <line x1="22" y1="128" x2="20" y2="130" style="stroke: #666;" />
+
+            </svg>
+            <svg id="ani" width="200" height="200" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="position: absolute;left: 0;top: 0;display: none;transform: translateZ(0);">
+
+                <path d="M 20 40 L 80 40 L 80 90 A 10 10 90 0 1 70 100 L 30 100 A 10 10 90 0 1 20 90" style="fill: #e9e8ee;" />
+
+                <!-- <circle class="eye" cx="40" cy="60" r="2.5" style="fill: #fff;" />
+                <circle class="eye" cx="60" cy="60" r="2.5" style="fill: #fff;" /> -->
+
+                <path d="M 35 40 A 15 15 180 1 1 65 40" style="fill: none; stroke: #e9e8ee; stroke-width: 5;" />
+
+                <circle class="eye" r="2.5" style="fill: #fff;">
+                    <animateMotion
+                            dur="0.8s"
+                            repeatCount="indefinite"
+                            keyPoints="0;0;1;1"
+                            keyTimes="0;0.3;0.9;1"
+                            calcMode="linear">
+                        <mpath xlink:href="#eyeleft"/>
+                    </animateMotion>
+                </circle>
+                <circle class="eye" r="2.5" style="fill: #fff;">
+                    <animateMotion
+                            dur="0.80s"
+                            repeatCount="indefinite"
+                            keyPoints="0;0;1;1"
+                            keyTimes="0;0.4;0.8;1"
+                            calcMode="linear">
+                        <mpath xlink:href="#eyeright"/>
+                    </animateMotion>
+                </circle>
+                <circle  class="mouth"  cx="50" cy="70" r="15" style="fill: none; stroke: #fff; stroke-width: 5; stroke-linecap: round;">
+                </circle>
+                <path id="eyeright"  d="M 40 60 A 15 15 180 0 1 60 60" style="fill: none; stroke-width: 0;" />
+                <path id="eyeleft"  d="M 35 70 A 15 15 180 0 1 40 60" style="fill: none; stroke-width: 0;" />
+            </svg>
+        </div>
+    </body>
+</html>
