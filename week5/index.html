@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <meta content="width=device-width,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0,user-scalable=no"
+        name="viewport">
+  <link rel="stylesheet" href="../public/reset.css">
+  <style type="text/css">
+    .avatar-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 2.5rem;
+    }
+
+    /*!
+ * @åç§°ï¼šbase.css
+ * @åŠŸèƒ½ï¼š1ã€é‡è®¾æµè§ˆå™¨é»˜è®¤æ ·å¼
+ *       2ã€è®¾ç½®é€šç”¨åŽŸå­ç±»
+ */
+    html {
+      background: #fff;
+      color: #000
+    }
+
+    body, button, input, select, textarea {
+      font: 12px Helvetica Neue, Helvetica, Arial, Microsoft Yahei, Hiragino Sans GB, Heiti SC, WenQuanYi Micro Hei, sans-serif
+    }
+
+    .pic {
+      position: relative;
+      width: 160px;
+      height: 100px;
+      display: block;
+      overflow: hidden;
+      text-align: center;
+      border-radius: 4px;
+    }
+
+    .pic img {
+      margin: 0 auto;
+      outline: 0;
+    }
+
+    .lazy-img {
+      background: url(//s1.hdslb.com/bfs/static/jinkela/home/asserts/img_loading.png) 50% no-repeat;
+      width: 100%;
+      height: 100%;
+      display: inline-block;
+    }
+
+    .pic .medal {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 24px;
+      pointer-events: none;
+    }
+
+    .cover-preview-module {
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      transition: opacity .3s;
+    }
+
+    .progress-bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 10px;
+      border-color: #000;
+      border-style: solid;
+      border-width: 4px 8px;
+      background: #444;
+      box-sizing: border-box;
+    }
+
+    .cover-preview-module .progress-bar span {
+      display: block;
+      background: #fff;
+      height: 2px;
+    }
+
+    .mask-video {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .2);
+      transition: opacity .3s;
+    }
+
+    .show {
+      opacity: 1;
+    }
+
+    .cover-preview-module .cover {
+      position: absolute;
+      left: 0;
+      top: 7px;
+      height: 98px;
+      width: 100%;
+      margin-top: 2px;
+    }
+
+  </style>
+</head>
+<body>
+<div class="avatar-wrapper">
+  <div class="pic">
+    <div class="lazy-img">
+      <img
+          src="https://idst-video-img.oss-cn-hangzhou.aliyuncs.com/image/20190513/aad3f1d150984a1d9d04acf0308eb271.jpg?x-oss-process=image/resize,m_fixed,h_100,w_160">
+    </div>
+    <i class="icon medal "></i>
+    <div class="cover-preview-module show">
+      <div class="cover"></div>
+      <div class="progress-bar"><span style="width: 10%;"></span></div>
+    </div>
+    <div class="mask-video"></div>
+  </div>
+</div>
+
+<script src="../public/jquery-3.2.1.js"></script>
+<script>
+
+  var data = {
+    "pvdata": "//i0.hdslb.com/bfs/videoshot/73147725.bin",
+    "img_x_len": 10,
+    "img_y_len": 10,
+    "img_x_size": 160,
+    "img_y_size": 90,
+    "image": ["https://idst-video-img.oss-cn-hangzhou.aliyuncs.com/image/20190513/ae00e201f3744964bb17a42b16c05ee6.jpg"],
+    "index": [0, 0, 6, 13, 19, 25, 31, 37, 45, 51, 56, 62, 68, 74, 80, 87, 93, 98, 104, 110, 115, 121, 129, 135, 141, 149, 155, 160, 165, 173, 179, 185, 190, 196, 203, 211, 218, 223, 229, 234, 240, 247, 253, 259, 265, 271, 277, 283, 289, 295, 300, 306, 311, 319, 325, 330, 338, 344, 350, 356, 362]
+  };
+
+  $(".pic").mousemove(function (event) {
+    console.log('e', event.offsetX);
+
+    var t = event.offsetX;
+    this.width = 160;
+    this.height = 100;
+
+    var a = data.index.length
+      , e = data.img_y_size / data.img_x_size * this.width;
+    this.progress = Math.floor(t / this.width * 100),
+      this.size = this.width * data.img_x_len;
+    var i = Math.floor(t / this.width * a);
+    this.x = -i % data.img_x_len * this.width,
+      this.y = -Math.floor(i / data.img_x_len) * e;
+    this.img = data.image;
+
+    var self = this;
+
+    $('.cover').css({
+      backgroundImage: "url(" + self.img + ")",
+      backgroundPosition: self.x + "px " + self.y + "px",
+      backgroundSize: self.size + "px"
+    })
+
+    $('.progress-bar span').css({
+      width: self.progress + "%"
+    })
+
+
+  });
+
+</script>
+
+</body>
+</html>
