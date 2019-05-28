@@ -12,5 +12,10 @@
 [每周一个前端动画之四：掘金头像旋转动画](https://juejin.im/post/5a9bc63f6fb9a028be357720)
 
 [每周一个前端动画之五：B站视频预览动画](https://juejin.im/post/5ced4d90e51d457755550851)
+
+
+## qq群
+<img width="360px" src="http://static.zhyjor.com/QQ2019-qun.png">
+
 ## 欢迎关注公众号
-![](http://oankigr4l.bkt.clouddn.com/wexin.png)
+![](http://static.zhyjor.com/wexin.png)
