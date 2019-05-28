@@ -21,11 +21,7 @@
       padding: 2.5rem;
     }
 
-    /*!
- * @åç§°ï¼šbase.css
- * @åŠŸèƒ½ï¼š1ã€é‡è®¾æµè§ˆå™¨é»˜è®¤æ ·å¼
- *       2ã€è®¾ç½®é€šç”¨åŽŸå­ç±»
- */
+
     html {
       background: #fff;
       color: #000
@@ -37,8 +33,8 @@
 
     .pic {
       position: relative;
-      width: 160px;
-      height: 100px;
+      width: 203px;
+      height: 370px;
       display: block;
       overflow: hidden;
       text-align: center;
@@ -50,13 +46,6 @@
       outline: 0;
     }
 
-    .lazy-img {
-      background: url(//s1.hdslb.com/bfs/static/jinkela/home/asserts/img_loading.png) 50% no-repeat;
-      width: 100%;
-      height: 100%;
-      display: inline-block;
-    }
-
     .pic .medal {
       position: absolute;
       left: 0;
@@ -66,7 +55,7 @@
       pointer-events: none;
     }
 
-    .cover-preview-module {
+    .cpm {
       opacity: 0;
       position: absolute;
       left: 0;
@@ -89,7 +78,7 @@
       box-sizing: border-box;
     }
 
-    .cover-preview-module .progress-bar span {
+    .cpm .progress-bar span {
       display: block;
       background: #fff;
       height: 2px;
@@ -110,11 +99,11 @@
       opacity: 1;
     }
 
-    .cover-preview-module .cover {
+    .cpm .cover {
       position: absolute;
       left: 0;
       top: 7px;
-      height: 98px;
+      height: 360px;
       width: 100%;
       margin-top: 2px;
     }
@@ -126,10 +115,10 @@
   <div class="pic">
     <div class="lazy-img">
       <img
-          src="https://idst-video-img.oss-cn-hangzhou.aliyuncs.com/image/20190513/aad3f1d150984a1d9d04acf0308eb271.jpg?x-oss-process=image/resize,m_fixed,h_100,w_160">
+          src="./bg-single.png">
     </div>
     <i class="icon medal "></i>
-    <div class="cover-preview-module show">
+    <div class="cpm show">
       <div class="cover"></div>
       <div class="progress-bar"><span style="width: 10%;"></span></div>
     </div>
@@ -141,35 +130,30 @@
 <script>
 
   var data = {
-    "pvdata": "//i0.hdslb.com/bfs/videoshot/73147725.bin",
-    "img_x_len": 10,
-    "img_y_len": 10,
-    "img_x_size": 160,
-    "img_y_size": 90,
-    "image": ["https://idst-video-img.oss-cn-hangzhou.aliyuncs.com/image/20190513/ae00e201f3744964bb17a42b16c05ee6.jpg"],
-    "index": [0, 0, 6, 13, 19, 25, 31, 37, 45, 51, 56, 62, 68, 74, 80, 87, 93, 98, 104, 110, 115, 121, 129, 135, 141, 149, 155, 160, 165, 173, 179, 185, 190, 196, 203, 211, 218, 223, 229, 234, 240, 247, 253, 259, 265, 271, 277, 283, 289, 295, 300, 306, 311, 319, 325, 330, 338, 344, 350, 356, 362]
+    "len_x": 20,
+    "width": 203,
+    "height": 360,
   };
 
   $(".pic").mousemove(function (event) {
     console.log('e', event.offsetX);
 
     var t = event.offsetX;
-    this.width = 160;
-    this.height = 100;
+    this.width = 203;
+    this.height = 360;
 
-    var a = data.index.length
-      , e = data.img_y_size / data.img_x_size * this.width;
+    var a = 83
+      , e = data.height / data.width * this.width;
     this.progress = Math.floor(t / this.width * 100),
-      this.size = this.width * data.img_x_len;
+      this.size = this.width * data.len_x;
     var i = Math.floor(t / this.width * a);
-    this.x = -i % data.img_x_len * this.width,
-      this.y = -Math.floor(i / data.img_x_len) * e;
-    this.img = data.image;
+    this.x = -i % data.len_x * this.width,
+      this.y = -Math.floor(i / data.len_x) * e;
 
     var self = this;
 
     $('.cover').css({
-      backgroundImage: "url(" + self.img + ")",
+      backgroundImage: "url(./bg-mult.png)",
       backgroundPosition: self.x + "px " + self.y + "px",
       backgroundSize: self.size + "px"
     })
